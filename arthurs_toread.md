@@ -1,0 +1,14 @@
+ - [ ] The Cost of Fairness in Binary Classification 3.3  
+ - [ ] http://www.ukcen.net/ethical_issues/ethical_frameworks/the_four_principles_of_biomedical_ethics  
+ - [ ] https://facctconference.org/2021/acceptedpapers.html  
+ - [ ] https://dl.acm.org/doi/pdf/10.1145/3442188.3445921  
+ - [ ] https://iaa.jhu.edu/projects/bias-and-privacy-acts-in-ai-for-healthcare-and-autonomous-systems/  
+ - [ ] https://www.igi-global.com/chapter/fairness-and-ethics-in-artificial-intelligence-based-medical-imagining/289720  
+ - [ ] https://datasociety.net/announcements/2019/12/02/fairness-in-machine-learning-in-health/  
+ - [ ] https://www.youtube.com/watch?v=MzuoWAk9_AQ  
+ - [ ] https://www.youtube.com/watch?v=LZJ2-zrQEW4  
+ - [ ] https://www.nature.com/articles/s42256-021-00396-x#citeas  
+ - [ ] https://drive.google.com/file/d/1OhXymrp9HgARpU9adEu2BGG0W14GlrJL/view  
+ - [ ] https://drive.google.com/file/d/1dvJfvVLIQVeeKaLrMlXfX6lcVTzhkDQ0/view  
+ - [ ] https://www.fairmlforhealth.com/accepted-papers  
+ 
