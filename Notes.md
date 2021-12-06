@@ -21,3 +21,16 @@ Effects of technology on pre-existing problems.
  - Trade-off privacy vs predictability.
  - Trade-off non-discrimination vs predictability. 
  - Ethical dilemmas.
+
+
+### Ethical limitations of algorithmic fairness solutions in health care machine learning
+**Source**: https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30065-0/fulltext.  
+**Summary**: algorithmic solutions for bias are insufficient alone.
+Identity could be a true predictor as well as a source of discrimination.
+Fairness could reduce the efficacy of trained models, and bring to less effective treatment of patients.  
+**Assessment**: Short, high-level, at most source of quotes.
+**Topics**:  
+ - Insufficiency of algorithmic solutions to bias.
+ - Trade-off fairness-predictability.
+ - Non-maleficience vs justice.
+ - Protected attributes as predictors vs as sources of unequal treatment.
