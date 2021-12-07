@@ -28,7 +28,7 @@ Effects of technology on pre-existing problems.
 **Summary**: algorithmic solutions for bias are insufficient alone.
 Identity could be a true predictor as well as a source of discrimination.
 Fairness could reduce the efficacy of trained models, and bring to less effective treatment of patients.  
-**Assessment**: Short, high-level, at most source of quotes.
+**Assessment**: Short, high-level, at most source of quotes.  
 **Topics**:  
  - Insufficiency of algorithmic solutions to bias.
  - Trade-off fairness-predictability.
