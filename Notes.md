@@ -28,9 +28,40 @@ Effects of technology on pre-existing problems.
 **Summary**: algorithmic solutions for bias are insufficient alone.
 Identity could be a true predictor as well as a source of discrimination.
 Fairness could reduce the efficacy of trained models, and bring to less effective treatment of patients.  
-**Assessment**: Short, high-level, at most source of quotes.  
+**Assessment**: Short, high-level, at most source of quotes.
 **Topics**:  
  - Insufficiency of algorithmic solutions to bias.
  - Trade-off fairness-predictability.
  - Non-maleficience vs justice.
  - Protected attributes as predictors vs as sources of unequal treatment.
+
+
+ ### Algorithm Fairness in AI for Medicine and Healthcare
+ **Source**: https://arxiv.org/abs/2110.00603.  
+ **Summary**: Honest overview of problems and solutions in applying ML to health (different applications: scans, structured data predictions, decision systems, clustering, ...). Shows how the discussion is not black-or-white, but needs to weigh fairness and efficacity. Hard to summarize, see the breadth of topics below.  
+ **Assessment**: Good mix technical-ethical (mostly technical though). Some mentions of trade-offs, which are mostly secondary in the text though. Well-worth a read.  
+ **Topics**: 
+  - Examples of health disparities.  
+  - Historical bias (p. 3); negative legacy, labeling prejudice (p. 6).  
+  - Protected attributes as true predictors (p. 3, p. 16).  
+  - Dataset shift (p. 4, p. 12).  
+  - Trade-offs: accuracy-fairness and between different fairness measures (p. 5).  
+  - Fairness technical proposals:  
+    * Preprocessing: Importance Weighting (p. 6), Targeted Data Collection and Resampling (p. 8) (my note: ++ do not treat datasets as fix things).  
+    * In-processing: Constraint Optimization (p. 10), Adversarial Fair Learning (p. 10).  
+    * Post-processing: Calibration (p. 12). ++ discussion on individual disadvantage and accuracy trade-off: "the exclusion of individual predictions and trade-off in model accuracy highly disfavor the use of this method in criminal justice and healthcare systems." (p. 12).  
+  - Challenges in AI-SaMD Deployment:  
+    * Missing diversity in biomedical datasets (p. 15).  
+    * Image acquisition and measurement variation (p. 18): domain/acquisition shift.  
+    * Temporal dataset shift (p. 19): data generation through discriminatory processes, annotation shift (intra-observer variability, evolving clinical knowledge).  
+    * Fragility of race (p. 19): unclear/different definitions, counfounders, social construct, granularity, ...  
+  - Solutions:  
+    * Distributed learning (against unfair dataset shift): method that insures data privacy (and compliance to rules for health data); mitigates disparate impact. But: new biases due to the participating institutions and their representation. (p. 21)  
+    * Fair representation learning via disentanglement (p. 25).  
+    * Model auditing using interpretability: saliency maps and perturbations (p. 27), attention-based interpretability (p. 28). => failure auditing  
+  - Cool example of how subgroups can have different predictors and variable feature importance: p. 28 (EMR dataset).  
+  - Distribution of roles in ensuring fairness: rules/implementation (p. 22).
+  - Privacy concerns (data collections and resampling) (p. 8).  
+  - Very good table with different examples of unfairness, related dataset shift, and mitigation strategies (p. 12, 13).  
+  - Fairness-accuracy trade-off in disentagled representations (p. 26).  
+  - Data users VS data regulators in disentagled representations (p. 26).  
