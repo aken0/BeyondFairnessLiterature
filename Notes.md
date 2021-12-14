@@ -1,10 +1,5 @@
 # Notes
 
-### Randomized Controlled Trials in Medical AI 
-- 123
-### Ensuring Fairness in ML
-- More of a case study
-
 ### Ethical Considerations of Using Machine Learning for Decision Support in Occupational Health: An Example Involving Periodic Workers' Health Assessments
 **Source**: https://link.springer.com/content/pdf/10.1007/s10926-020-09895-x.pdf.  
 **Summary**: Ethical assessment of the impact of Machine Learning Decision Support Tools in occupational health according to frameworks from medical ethics (Beauchamp and Childress) and philosophy of technology.
@@ -36,11 +31,11 @@ Fairness could reduce the efficacy of trained models, and bring to less effectiv
  - Protected attributes as predictors vs as sources of unequal treatment.
 
 
- ### Algorithm Fairness in AI for Medicine and Healthcare
- **Source**: https://arxiv.org/abs/2110.00603.  
- **Summary**: Honest overview of problems and solutions in applying ML to health (different applications: scans, structured data predictions, decision systems, clustering, ...). Shows how the discussion is not black-or-white, but needs to weigh fairness and efficacity. Hard to summarize, see the breadth of topics below.  
- **Assessment**: Good mix technical-ethical (mostly technical though). Some mentions of trade-offs, which are mostly secondary in the text though. Well-worth a read.  
- **Topics**: 
+### Algorithm Fairness in AI for Medicine and Healthcare
+**Source**: https://arxiv.org/abs/2110.00603.  
+**Summary**: Honest overview of problems and solutions in applying ML to health (different applications: scans, structured data predictions, decision systems, clustering, ...). Shows how the discussion is not black-or-white, but needs to weigh fairness and efficacity. Hard to summarize, see the breadth of topics below.  
+**Assessment**: Good mix technical-ethical (mostly technical though). Some mentions of trade-offs, which are mostly secondary in the text though. Well-worth a read.  
+**Topics**: 
   - Examples of health disparities.  
   - Historical bias (p. 3); negative legacy, labeling prejudice (p. 6).  
   - Protected attributes as true predictors (p. 3, p. 16).  
@@ -65,3 +60,10 @@ Fairness could reduce the efficacy of trained models, and bring to less effectiv
   - Very good table with different examples of unfairness, related dataset shift, and mitigation strategies (p. 12, 13).  
   - Fairness-accuracy trade-off in disentagled representations (p. 26).  
   - Data users VS data regulators in disentagled representations (p. 26).  
+
+
+### The ethics of AI in health care: A mapping review
+**Source**:  
+**Summary**:  
+**Assessment**:  
+**Topics**:  
