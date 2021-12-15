@@ -12,6 +12,12 @@
 - Gives recommendations on how one could incorporate fairness concerns into ML 
 **Verdict:** very high level, no concrete focus on ethics, rather general fairness in mAI
 
+### The Ethics of Machine Learning in Medical Sciences: Where Do We Stand Today?
+**Source:** https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7640783/
+
+
+**Verdict:** e
+
 ### Ethical Considerations of Using Machine Learning for Decision Support in Occupational Health: An Example Involving Periodic Workers' Health Assessments
 **Source**: https://link.springer.com/content/pdf/10.1007/s10926-020-09895-x.pdf.  
 **Summary**: Ethical assessment of the impact of Machine Learning Decision Support Tools in occupational health according to frameworks from medical ethics (Beauchamp and Childress) and philosophy of technology.
