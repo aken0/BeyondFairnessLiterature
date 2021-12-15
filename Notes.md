@@ -2,7 +2,8 @@
 
 ### Randomized Controlled Trials in Medical AI(2021)
 - Motivates need for RCTs in Medical AI
-- Shows multiple challenges/biases in RCTs as well as some mitigations
+- Shows multiple challenges/biases in RCTs as well as some mitigation
+
 **Verdict:** probably not relevant for our topic, maybe check some of the citations
 
 ### Ensuring Fairness in ML(2018)
@@ -10,6 +11,7 @@
 - Shows different biases in mAI 
 - Introduces three "Distributive Justice Options" to explain different fairness concepts (high-level overview)
 - Gives recommendations on how one could incorporate fairness concerns into ML 
+
 **Verdict:** very high level, no concrete focus on ethics, rather general fairness in mAI
 
 ### The Ethics of Machine Learning in Medical Sciences: Where Do We Stand Today?
