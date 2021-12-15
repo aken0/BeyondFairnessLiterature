@@ -1,4 +1,9 @@
  - [ ] The Cost of Fairness in Binary Classification 3.3  
+ - [ ] Mittelstadt 2019. The ethics of biomedical 'big data' analytics.  
+ - [ ] Topol 2019. High-performance medicine: the convergence of human and artificial intelligence.  
+ - [ ] Mimic-if: interpretability and fairness evaluation of deep learning decision support systems  
+ - [ ] Celis et al, How to be fair and diverse?  
+ - [ ] Williamson et al, Costs and benefits of fair representation learning  
  - [ ] http://www.ukcen.net/ethical_issues/ethical_frameworks/the_four_principles_of_biomedical_ethics  
  - [ ] https://facctconference.org/2021/acceptedpapers.html  
  - [ ] https://dl.acm.org/doi/pdf/10.1145/3442188.3445921  
