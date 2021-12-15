@@ -63,7 +63,58 @@ Fairness could reduce the efficacy of trained models, and bring to less effectiv
 
 
 ### The ethics of AI in health care: A mapping review
-**Source**:  
-**Summary**:  
-**Assessment**:  
+**Source**: https://www.sciencedirect.com/science/article/abs/pii/S0277953620303919.  
+**Summary**: Review of existing literature on the ethics of AI in health care.
+Divides ethical issues in epistemic, normative (fairness...) and traceability issues.
+Distinguishes levels of abstraction: individual, interpersonal, group, institutional, and societal or sectoral.  
+![summary_1](ethics_ai_healthcare_table_1.png)
+![summary_2](ethics_ai_healthcare_table_1.png)
+![summary_3](ethics_ai_healthcare_table_1.png)  
+**Assessment**: Non-technical, socio-philosophical.
+Of particular interest to us is 3.2 Normative concerns.
+The first paragraph of page 5 is definitely something we should use, as a seed for sources as well!
+Very interesting to deep down into the "individual's integrity of self harm => maleficience" and find counter-arguments.
+Interesting distinction of levels of abstraction, which can link to a discussion of trade-offs individual-group.
+But: not much is said about trade-offs (see: points of critique).
+In general, this is a big problem I have with the paper: they do not seem (to me) to recognize that many of the problems they point to are inherent to the medical problem and not to the algorithmic solutions.
+This makes for a good starting point for our paper: showing how trade-offs and ethical problems are mostly inherent to the application domain, and not to algorithmic solutions.
+ML just makes them visible and unavoidable instead of implicitly shifting them onto practitioners.
+I think Bob had a similar point in the lecture about technology.  
 **Topics**:  
+ - AI for clinician support (cooperation) and not replacement (p. 2).  
+ - Proactivity: make sure to avoid errors to avoid early social rejection (p. 2).  
+ - Biomedical ethical principles well-developed (p. 2).  
+ - Challenge: current research limited to single fields instead of interaction, focused on individual level impacts, does not consider variability of ethical concerns depending on algo development stage (p. 2).  
+ - Only recommendations not necessarily a solution: clinicians might rely too heavily/behave uncritically => overreliance, deskilling of practicioners (p. 4).  
+ - Epistemic level:  
+  * Advantages of AI: evidence-based decisions, most informed decision (more data), can operate at scale (p. 3).  
+  * Doubts on objectivity: meaninglesness of patterns, overfitting, lack of reproducibility, untranslatability, scientific rigor, safety, results heavily value-laden (p. 3).  
+  * Individual LoA (level of abstraction): risk of misdiagnosis (malfunctionment, HCP relying too heavily/uncritically on recommendation) (p. 4).  
+  * Group LoA: misdiagnosis repeated => scale of solution = scale of problems (p. 4).  
+  * Interpersonal LoA: trust and empathy, de-humanisation, impersonalization, paternalism which could also lead to poorer outcomes due to disconnect between pure medical evidence and actual behavior change (p. 4).  
+  * Institutional, sectoral, societal LoAs: increasing use of AI-health algos in public health decisions: flawed assumptions=>poor-quality evidence; data sharing private-public; quality of data transformation process (p. 4).  
+- Normative level:
+  * "it would be ethically remiss to ignore these opportunities" (p. 4), but those opportunitites "are not created by AI-Health technologies per se but by their ability to fundamentally change the intrinsic nature of the ways in which healthcare is delivered by coupling, re-coupling and de-coupling different parts of the system.". This relates to the lecture on AI as a technology/tool.  
+  * AI-health couples patients and their data (patients ARE their data), re-couples research and practice, de-couples presence of HCP (healthcare providers) and location of the patient (p. 4).  
+  * Individual LoA: (opaque) data sharing=>privacy, **less involvement in decisions undermines individual autonomy** (need: understanding of data AND methods: ehealth literacy difficult and black-box algos). Damage to individuals's integrity of self because their confidence to refuse treatment is attacked; this can be seen as a harm, **contrasting with non-maleficience** (p. 5). On the clinician's side, risk of being left on the side/being unsure about exerting their own agency, but uncertainty of the situations can only be resolved by physicians.  
+  * Group LoA: AI might only be able to recognize illnesses/... that have fairly set protocols, and only fit groups for which many examples are available. This might exacerbate existing inequalities, benefitting those groups that generate enough data. Algorithms might "ignore outliers", providing a basis for discrimination. Instituitions should decide what can be delegated to AI, and base their decisions on whether healthcare is "seen as a means of promoting social justice", on "which values should be embedded in algorithmic decision-making services", and "what sort of population-level behavioural change the health system should be able to aim for".  
+  * Sectoral LoA: "risk of privately held AI-health solutions, trained on datasets that have been generated about the public by public actors but then (lawfully) shared with private companies" could give them a lead advantage and make the public sector dependent on those initially chosen companies.  
+  * Societal LoA: society must decide values of care before applying AI-health (is human interaction important?). How should factors (AI prediction vs clinician's personal judgement) be weighted? Direct involvement of the public in designing AI-health (public opinion data) may be necessary/help.  
+ - Traceability level:  
+  * Healthcare systems rely on "interactions between human, artificial, and hybrid agents [...] making it increasingly challenging to identif interaction-emerging risks and allocate liability, raising ethical concerns with regards to moral responsibility". (p. 6)  
+  * AI-health solutions: data collected, transformed, analyzed, ... decision-making a black box, entire chain comples => no clear causal chain of given outcome => inaccessible and opaque ecosystem.  
+  * Example monitoring system:
+    - Individual LoA: Advice from AI device might not be followed for a lot of reasons (and might have been wrong), but if something happens and the individual did not follow the advice, could lead to victim blaming. This might all "shift the ethical burden of 'living well' squarely onto newly accountable individuals". (p. 6).  
+    - Group LoA: underperformance on some groups => advice less followed => group seen as "more morally irresponsible about their healthcare".  
+    - Interpersonal/institutional/sectoral LoAs: responsibility=>liability (liability issue must be resolved before adoption). HCP providing advice based on algo => medical malpractice when it goes wrong? Common thesis: explainability is the answer => once algo explainable, it might even be medical malpractice to not rely on the algo's output.  
+  * Society will decide what is acceptable, but who is society? Who has a say, how much do they count?  
+ - Distinguish: type of concern, LoA, development stage of algorithm (p. 8).  
+ - Need balance between protecting individuals from harm and support innovation and its benefits (p. 8). "'there cannout be exceptionalism for AI in medicine,' expecially not when there is potentially so much to gain".  
+**Points of critique**:  
+In page 5, while discussing fairness and better accuracy to a group, the authors forget to mention trade-offs.
+Should we discard available information about a group just to have predictions that are "as bad as those for other groups"?
+What is the difference with clinicians: do they not also learn from examples, and implicitly learn better for a group/overfit on it?
+The comparison AI-humans seems missing in this point.
+Furthermore, it seems to imply that AI algorithms can only focus on macro accuracy.  
+P. 6 monitoring systems example, individual LoA: how is this different from medical advice given by humans?
+
