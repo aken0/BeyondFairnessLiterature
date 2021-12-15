@@ -1,9 +1,16 @@
 # Notes
 
-### Randomized Controlled Trials in Medical AI 
-- 123
-### Ensuring Fairness in ML
-- More of a case study
+### Randomized Controlled Trials in Medical AI(2021)
+- Motivates need for RCTs in Medical AI
+- Shows multiple challenges/biases in RCTs as well as some mitigations
+**Verdict:** probably not relevant for our topic, maybe check some of the citations
+
+### Ensuring Fairness in ML(2018)
+- Presents two case studies
+- Shows different biases in mAI 
+- Introduces three "Distributive Justice Options" to explain different fairness concepts (high-level overview)
+- Gives recommendations on how one could incorporate fairness concerns into ML 
+**Verdict:** very high level, no concrete focus on ethics, rather general fairness in mAI
 
 ### Ethical Considerations of Using Machine Learning for Decision Support in Occupational Health: An Example Involving Periodic Workers' Health Assessments
 **Source**: https://link.springer.com/content/pdf/10.1007/s10926-020-09895-x.pdf.  
