@@ -141,3 +141,6 @@ The comparison AI-humans seems missing in this point.
 Furthermore, it seems to imply that AI algorithms can only focus on macro accuracy.  
 P. 6 monitoring systems example, individual LoA: how is this different from medical advice given by humans?
 
+
+### Addressing Fairness, Bias, and Appropriate Use of Artificial Intelligence and Machine Learning in Global Health
+
