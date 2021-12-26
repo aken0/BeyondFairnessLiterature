@@ -90,9 +90,9 @@ Fairness could reduce the efficacy of trained models, and bring to less effectiv
 **Summary**: Review of existing literature on the ethics of AI in health care.
 Divides ethical issues in epistemic, normative (fairness...) and traceability issues.
 Distinguishes levels of abstraction: individual, interpersonal, group, institutional, and societal or sectoral.  
-![summary_1](ethics_ai_healthcare_table_1.png)
-![summary_2](ethics_ai_healthcare_table_1.png)
-![summary_3](ethics_ai_healthcare_table_1.png)  
+![summary_1](figures/ethics_ai_healthcare_table_1.png)
+![summary_2](figures/ethics_ai_healthcare_table_1.png)
+![summary_3](figures/ethics_ai_healthcare_table_1.png)  
 **Assessment**: Non-technical, socio-philosophical.
 Of particular interest to us is 3.2 Normative concerns.
 The first paragraph of page 5 is definitely something we should use, as a seed for sources as well!
