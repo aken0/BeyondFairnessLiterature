@@ -143,4 +143,40 @@ P. 6 monitoring systems example, individual LoA: how is this different from medi
 
 
 ### Addressing Fairness, Bias, and Appropriate Use of Artificial Intelligence and Machine Learning in Global Health
-
+**Source**: https://www.frontiersin.org/articles/10.3389/frai.2020.561802/full  
+**Summary**:  
+As the title says: fairness, bias, and appropriate use of AI in global health (particularly: low- and middle-income countries).
+After a theoretical discussion, they present a case study in which they outline how to assess fairness and bias at different stages of the (development) pipeline.  
+![Analysis_of_bias_in_the_development_pipeline](figures/bias_pipeline.jpg)  
+**Assessment**: Nice and nuanced.
+Point out how many ethical choices are subjective and somewhat arbitrary.
+Mention trade-offs, many overlapping points with Bob's lectures.
+Some presence of math ++.  
+Interesting evaluations that show how many problems are not proper to the technology but to the problem (see Bob's lectures).  
+**Topics**:  
+ - Examples of applications of ML to medicine and global health (p. 2).  
+ - Potential harms greater in LMIC (low- and middle-income countries): marginalized populations and greater discrimination, lacking legal and regulatory framework, current health disparities that could be exacerbated (p. 2).  
+ - Ethics come into play when deciding on the operating point of the algorithm, which decides on a trade-off false positives vs false negatives that is often debated in medicine => not ML-specific (p. 3).  
+ - Group differences in medicine caused by biological differences (/genetic), cultural/behavioral differences, environmental factors, confounding variables; unbalanced datasets (political weight/demographic weight) (p. 3).  
+ - 3 criteria of evaluation of ML systems: appropriateness, bias, fairness.  
+  * Appropriateness: assessed before deployment, = ML matches the specific context and population? (see Williamson's last choice, "data" lecture). Importance of the context (the problem is not the algorithm, see Williamson's "technology" lecture) => need for domain knowledge. Interpretability is often desired by doctors. Unbalanced datasets are a problem, and one should adapt to the specific population. "the proper balance between sensitivity (true positive rate) and specificity (true negative rate) is ultimately a subjective decision that depends on the application objectives and relies on the ethical principles being adopted." (p. 5). Solutions to imbalanced datasets: resampling, ensemble methods, cost functions and hyperparameter tuning, combinations.  
+  * Bias: data bias is caused by flaws in human design. != Algorithmic bias is independent of ethics (bias is judged unfair from legal or ethical point of view) (p. 6).  
+    - Causes of bias: implicit (e.g. unforeseen correlations) vs explicit causes (e.g. sampling bias, batch effect in measurements).  
+    - Mitigation of bias: data collection and sampling process, data processing, feature extraction, regularization techniques, cost functions, post-processing => test for bias at all stages!  
+    - Bias may still be tolerated in some contexts, but must be documented (p. 7).  
+  * Fairness: Individual or group level.  
+    - Consistency definition: similar features => similar treatment (p. 7). Practice: need to work at the group level (laws and algorithms). But: in medicine, those attributes might be important features (predictors).  
+    - Fairness is quantified in ML when determining the optimum operating point (ROC curve) (p. 7).  
+    - Definitions of fairness, contrasts (nothing new here); "In the case of medical diagnostic tests, the equality of odds criterion is often chosen [...]" (p. 8); when the criterion decreases performance much, consider using different models.  
+    - Transparency: the developers of ML systems for medicine may need to disclose the conditions of validity of a model (p. 8).  
+ - Interesting case study. Lessons learned:  
+  * If bias in the results persists when using balanced training data, the problem is not sampling bias in the training data (p. 11).  
+  * Examine feature differences between the groups of interest (eg smokers/non smokers) and see how they correlate to the target variable (and if the result is expected). Then possibly stratify based on that feature (pp. 12-13).  
+  * Finally, adjust the baseline probability (prior) based on the target population (p. 14).  
+ - Conclusions: LMICs particularly problematic for absence of legal framework and existing disparities; medical care and health tracking applications offer opportunities and risks.  
+ - Recommendations (general: medical problems often include hidden variables and correlations; domain expertise is necessary):  
+  * Question appropriate use (ML requires precise questions)  
+  * Maintain transparency for critical decisions  
+  * Enforce transparency in data and algorithms  
+  * Address and respect bias at each level of the computation (sampling bias, implicit cultural bias, true systematic bias inherent in biological processes)  
+  * Agree on a fairness metric ("While individual fairness is a good ideal, most laws are written with respect to group fairness [...] it should be recognized that trade-offs and compromises will often need to be made, to reconcile how the benefit and the risk will be shared across all groups." (p. 16))  
