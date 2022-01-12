@@ -180,3 +180,8 @@ Interesting evaluations that show how many problems are not proper to the techno
   * Enforce transparency in data and algorithms  
   * Address and respect bias at each level of the computation (sampling bias, implicit cultural bias, true systematic bias inherent in biological processes)  
   * Agree on a fairness metric ("While individual fairness is a good ideal, most laws are written with respect to group fairness [...] it should be recognized that trade-offs and compromises will often need to be made, to reconcile how the benefit and the risk will be shared across all groups." (p. 16))  
+
+
+### On the apparent conflict between individual and group fairness  
+**Source**: https://arxiv.org/pdf/1912.06883.pdf  
+

@@ -16,4 +16,5 @@
  - [ ] https://drive.google.com/file/d/1OhXymrp9HgARpU9adEu2BGG0W14GlrJL/view  
  - [ ] https://drive.google.com/file/d/1dvJfvVLIQVeeKaLrMlXfX6lcVTzhkDQ0/view  
  - [ ] https://www.fairmlforhealth.com/accepted-papers  
+ - [ ] https://www.nature.com/articles/s41599-020-0501-9  
  
