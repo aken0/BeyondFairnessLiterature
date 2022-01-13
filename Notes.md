@@ -184,4 +184,31 @@ Interesting evaluations that show how many problems are not proper to the techno
 
 ### On the apparent conflict between individual and group fairness  
 **Source**: https://arxiv.org/pdf/1912.06883.pdf  
+**Summary**: Individual and group fairness measures are not necessarily based on different ethical/normative principles.
+  Both of them are compatible with egalitarianism and consistency, and not with individual justice.
+  There is thus no intrinsic trade-off between individual and group fairness.
+  Plus, we can use both kinds of measures to implement different normative principles (in a way, they are equivalent).
+  The real difference in problems, where a trade-off is needed, is in worldviews: what is the cause of output differences for different groups?
+  This is a consequence of the assumptions we make about the world/our data.  
+**Assessment**: For sure a useful source for the individual vs group trade-off discussion (more on the ethical side).
+  Although the author's thesis is that such a trade-off is not needed, in my view he simply shifts the discussion (better reterms the problem).
+  The trade-off becomes an assumption about how much of the differences between two groups is caused by structural injustice and how much by individual differences.  
+  Not related to medicine/health, but it might be interesting to see how the idea translate.  
+**Topics**:  
+ - Description of the conflict individual/group fairness in the context of fair ML: group fairness (e.g. in statistical parity) harms consistency. Lack of principled discussions in fair-ML.  
+ - The real cause of the conflict in practice are constrasting (unstated) assumptions about the world/context.  
+ - Description and problems of individual/group fairness measures in fair-ML (ch. 2.1), balance and trade-off (ch. 2.1.3).  
+ - Principled discussion: the real underlying principles are consistency (often related to individual fairness) and egalitarianism (oftern related to group fairness).
+ Although they have natural correlations to group/individual fairness, they are in reality compatible to both (and both are compatible with each other).  
+ - Individual justice cannot be followed by any automated system (requires "case-by-case" decisions), and is incompatible with both fairness measures (individual fairness still equates and individual with its set of features).  
+ - In practice, the problem lies in the assumptions about the nature of differences: luck/systemic injustice OR individual choice.  
+ - It is difficult to decide on the assumptions; hence, one solution always remains not to use ML in the first place (5.3.1) (see Bob's lecture). Assumptions can't be avoided.  
+ - Conclusion: maybe we should concentrate more on the data-generating process (underlying structures).  
+**Comments**:  
+ - It is not at all surprising that the problem comes down to be a problem of assumptions.
+ - We know that ML models are based on assumptions (inductive bias), and cannot learn without them.  
+ - On consitency: arguably, most ML models (among all, regression) respect consistency because they learn continuous functions (and even more, if L2-regularization is applied) IF WE EXCLUDE CATEGORICAL VARIABLES.  
+ - Critique the sentence "the individual fairness distance metric could represent a rough consensus about how disadvantaged certain groups are in a given context" (5.1): nice and all, but how will this measure be determined in practice? I argue, based on statistics (statistical parity); so in the end, it comes down to the same problem: how to weigh the different causes of differences when we have no quantitative idea?  
+ - Application of the reasoning line to medicine appears more complicated: should we be concerned about egalitarianism at all in medical settings, and not obtaining the best results possible? If non-maleficience outweighs beneficience as a principle, then is it justify to insert UNVERIFIED ASSUMPTIONS about the nature of bias into a model, knowing that it will decrease its predictive power?  
+ - Since we don't know the nature of the errors in the data, the only acceptable solutions seems to be not using the data.  
 
