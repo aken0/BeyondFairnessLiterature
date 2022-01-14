@@ -1,4 +1,5 @@
  - [ ] The Cost of Fairness in Binary Classification 3.3  
+ - [ ] https://reporter.anu.edu.au/humanising-machine-intelligence  
  - [ ] Mittelstadt 2019. The ethics of biomedical 'big data' analytics.  
  - [ ] Topol 2019. High-performance medicine: the convergence of human and artificial intelligence.  
  - [ ] Mimic-if: interpretability and fairness evaluation of deep learning decision support systems  
