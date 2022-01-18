@@ -20,11 +20,11 @@
 \maketitle
 
 \begin{abstract}
-    We use the application of Machine Learning to healthcare as a case study of ethical tradeoffs.
-    We concentrate on tradeoffs between privacy and predictability in the use of patients' data, between group fairness and individual fairness in the attempt to make ML-based systems ``fair'', and between fairness and prediction accuracy when applying fairness constraints to the ML systems.
-    Firstly, we examine and discuss whether those tradeoffs are unavoidable, and relate them to moral dilemmas in moral philosophy.
-    Secondly, we examine the results that are obtainable with regards to those tradeoffs (where do we want to lie on the Pareto frontier?).
-    In the case of the tradeoff between group fairness and individual fairness, we dive into the conflict between the aggregate and the individual, between the population level view of the ``average man'' and the concrete individuals that are affected by the ethical policies.
+    We use the application of Machine Learning to healthcare as a case study of ethical trade-offs.
+    We concentrate on trade-offs between privacy and predictability in the use of patients' data, between group fairness and individual fairness in the attempt to make ML-based systems ``fair'', and between fairness and prediction accuracy when applying fairness constraints to the ML systems.
+    Firstly, we examine and discuss whether those trade-offs are unavoidable, and relate them to moral dilemmas in moral philosophy.
+    Secondly, we examine the results that are obtainable with regards to those trade-offs (where do we want to lie on the Pareto frontier?).
+    In the case of the trade-off between group fairness and individual fairness, we dive into the conflict between the aggregate and the individual, between the population level view of the ``average man'' and the concrete individuals that are affected by the ethical policies.
     In our critical analysis, we relate the existing best practices in medicine and their existing literature (as an example, the four principles proposed by Beauchamp and Childress), and the fairness tools and analyses provided by the ML community.
     As a consequence, we suggest what the communities could learn from each other and what differences need to be resolved.
 \end{abstract}
@@ -36,23 +36,19 @@
 
 
 \section{Introduction}
-%
+\input{chapters/introduction}
 
+\section{Trade-offs in machine learning and automated systems}
+\input{chapters/ml}
 
-\section{Tradeoffs in medical machine learning}
+\section{Trade-offs in medicine}
+\input{chapters/medicine}
 
-\subsection{Privacy and predictability}
-
-\subsection{Group fairness and individual fairness}
-
-\subsection{Fairness and prediction accuracy}
-
-
-
-\section{Medical best practices and tradeoffs}
-
+\section{Combining machine learning and medicine}
+\input{chapters/combination}
 
 \section{Conclusions}
+\input{chapters/conclusion}
 
 
 
