@@ -1,13 +1,41 @@
 \subsection{Old and new problems}
-% idea: most problems derive from medicine;
-%       if only inherently, they are already being dealt with (or ignored altogether).
-% the biggest problem introduced by ML is the unification of knowledge and strategy
-% (decisions could become less federated)
+As discussed in the previous sections, the practical problem of applying Machine Learning to health care tasks carries with it a certain number of unavoidable decisions about the relative importance of contrasting principles.
+In short, trade-offs have to be made.
+In this essay, we concentrate on trade-offs related with fairness considerations.
+An interesting aspect of such trade-offs is their origin: what are their causes?
+We argue that most, if not all, fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
+That is, Machine Learning does not introduce additional fairness problems, but simply specifies existing trade-offs and makes them unavoidable.
+
+As a concrete example, take the problem of unbalanced training data causing the Machine Learning algorithm to reach better performance on over-represented groups.
+This problem is hidden, but still present, in unassisted medicine.
+Medical practitioners arguably learn the best decisions partly from experience.
+If the majority of their patients come from a particular group, it is very likely that they will ``overfit'' their knowledge to that group, or at least be able to predict their response to particular treatments better.
+Similarly, textbook knowledge is derived from observations from medical practitioners and/or statistical studies.
+The data that informs that knowledge is probably very similar to the data used to train ML algorithms.
+The resulting inferences will hence be similarly biased as a consequence of data inbalances.
+
+We do not argue that ML does not introduce any new ethical problems, but that they are not fairness-related.
+For example, ML systems applied at a large scale unify decisions, exponentially increasing the impact of failures.
+Less federated decisions make for less error-robust systems, and unified treatment and strategy gives less indications about what works well, potentially reducing the possibilities for learning from single experiences.
+Additionally, automated decision systems distribute the responsibility for the decisions the system takes, potentially making it impossible to find a responsible person for potential misjudgements.
+Finally, the trust of the public in the decisions taken by automated decision systems may be low.
+If the decisions are not taken automatically, the practitioner might still rely too much on them and avoid a right call that would contradict the suggestion of the ML system \cite[p.~4]{Morley2020}.
+Additionally, they might pay less attention to the decisions that are assisted by technology (citation required).
+\begin{itemize}
+    \item Main point: most problems derive from medicine;
+        if only implicitly, they are already being dealt with (or ignored altogether).
+        Example: practitioners learn from experience, and their experience has biased data.
+    \item 1st problem introduced by ML: the unification of knowledge and strategy (decisions could become less federated).
+    \item 2nd problem introduced by ML: responsibility.
+    \item 3rd problem introduced by ML: trust.
+    \item All those problems are NOT fairness-related.
+\end{itemize}
 
 \subsection{Clarification of problems}
-% the mathematical rigor of ML forces us to think about those problems;
-% this is a positive feature and not a disadvantage.
+Main point: the mathematical rigor of ML forces us to think about those problems; this is a positive feature and not a disadvantage.
 
 \subsection{Advantage of inaction}
-% positive versus negative harms: in doubt, do nothing
-% this reasoning is much harder to apply to critical problems as those emerging in medicine
+\begin{itemize}
+    \item Positive versus negative harms: in doubt, do nothing.
+    \item This reasoning is much harder to apply to critical problems as those emerging in medicine.
+\end{itemize}
