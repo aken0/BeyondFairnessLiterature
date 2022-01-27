@@ -8,4 +8,5 @@
 6. Trying to ensure equal harms in a setting where medicine can very well solve one group's problems seems illogical.  
 7. In the moment we accept the data is false (mislabeled because of historical bias, following from injustice) or incomplete, we accept the problem is not perfectly solvable. We need to insert additional assumptions about how the data should look like, where the errors lie, ...  
 8. Individual justice ideas seem to go exactly in the opposite direction of "Explainable AI", since they basically say that concepts that can not be put into words should be used to base a decision. In general, Explainable AI requirements contrast with "AI cannot make human-like judgements".  
+9. The "advantage of being average".  
 
