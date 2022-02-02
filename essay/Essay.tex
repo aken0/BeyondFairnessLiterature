@@ -2,6 +2,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
 \usepackage{xcolor}
+\usepackage{url}
+\usepackage[style=numeric-comp]{biblatex}
+\addbibresource{Resources/bibliography.bib}
 
 \newcommand{\idea}[1]{\textcolor{blue}{#1}}
 
@@ -55,7 +58,8 @@
 \section{Conclusions}
 \input{chapters/conclusion}
 \clearpage
-\bibliographystyle{unsrt}
-\bibliography{Resources/bibliography}
+
+
+\printbibliography
 
 \end{document}
