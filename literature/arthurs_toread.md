@@ -1,4 +1,4 @@
- - [ ] The Cost of Fairness in Binary Classification 3.3  
+ - [ ] The Cost of Fairness in Binary Classification 3.3; appendix H  
  - [ ] https://reporter.anu.edu.au/humanising-machine-intelligence  
  - [ ] Mittelstadt 2019. The ethics of biomedical 'big data' analytics.  
  - [ ] Topol 2019. High-performance medicine: the convergence of human and artificial intelligence.  
@@ -18,4 +18,5 @@
  - [ ] https://drive.google.com/file/d/1dvJfvVLIQVeeKaLrMlXfX6lcVTzhkDQ0/view  
  - [ ] https://www.fairmlforhealth.com/accepted-papers  
  - [ ] https://www.nature.com/articles/s41599-020-0501-9  
- 
+ - [ ] McNamara & Williamson: Costs and benefits of fair representation learning.
+ - [ ] Meng & Liu: Mimic-if: interpretability and fairness evaluation of deep learning models on mimic-iv dataset. Example of different feature importance for different subgroups.

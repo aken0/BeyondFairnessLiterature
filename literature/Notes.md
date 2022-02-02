@@ -124,7 +124,7 @@ I think Bob had a similar point in the lecture about technology.
   * Sectoral LoA: "risk of privately held AI-health solutions, trained on datasets that have been generated about the public by public actors but then (lawfully) shared with private companies" could give them a lead advantage and make the public sector dependent on those initially chosen companies.  
   * Societal LoA: society must decide values of care before applying AI-health (is human interaction important?). How should factors (AI prediction vs clinician's personal judgement) be weighted? Direct involvement of the public in designing AI-health (public opinion data) may be necessary/help.  
  - Traceability level:  
-  * Healthcare systems rely on "interactions between human, artificial, and hybrid agents [...] making it increasingly challenging to identif interaction-emerging risks and allocate liability, raising ethical concerns with regards to moral responsibility". (p. 6)  
+  * Healthcare systems rely on "interactions between human, artificial, and hybrid agents [...] making it increasingly challenging to identify interaction-emerging risks and allocate liability, raising ethical concerns with regards to moral responsibility". (p. 6)  
   * AI-health solutions: data collected, transformed, analyzed, ... decision-making a black box, entire chain comples => no clear causal chain of given outcome => inaccessible and opaque ecosystem.  
   * Example monitoring system:
     - Individual LoA: Advice from AI device might not be followed for a lot of reasons (and might have been wrong), but if something happens and the individual did not follow the advice, could lead to victim blaming. This might all "shift the ethical burden of 'living well' squarely onto newly accountable individuals". (p. 6).  
@@ -132,7 +132,7 @@ I think Bob had a similar point in the lecture about technology.
     - Interpersonal/institutional/sectoral LoAs: responsibility=>liability (liability issue must be resolved before adoption). HCP providing advice based on algo => medical malpractice when it goes wrong? Common thesis: explainability is the answer => once algo explainable, it might even be medical malpractice to not rely on the algo's output.  
   * Society will decide what is acceptable, but who is society? Who has a say, how much do they count?  
  - Distinguish: type of concern, LoA, development stage of algorithm (p. 8).  
- - Need balance between protecting individuals from harm and support innovation and its benefits (p. 8). "'there cannout be exceptionalism for AI in medicine,' expecially not when there is potentially so much to gain".  
+ - Need balance between protecting individuals from harm and support innovation and its benefits (p. 8). "'there cannot be exceptionalism for AI in medicine,' expecially not when there is potentially so much to gain".  
 **Points of critique**:  
 In page 5, while discussing fairness and better accuracy to a group, the authors forget to mention trade-offs.
 Should we discard available information about a group just to have predictions that are "as bad as those for other groups"?
