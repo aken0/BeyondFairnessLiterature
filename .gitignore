@@ -1,4 +1,5 @@
 # Ignore all compile files
 essay/Essay.*
 !essay/Essay.tex
+!essay/Essay.pdf
 essay/indent.log
