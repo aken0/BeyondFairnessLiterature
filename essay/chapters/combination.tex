@@ -3,9 +3,9 @@ As discussed in the previous sections, the practical problem of applying Machine
 In short, trade-offs have to be made.
 In this essay, we concentrate on trade-offs related with fairness considerations.
 An interesting aspect of such trade-offs is their origin: what are their causes?
-We argue that most, if not all, fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
+We argue that many fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
 \idea{Look for resources in Bob's technology lecture.}
-That is, Machine Learning does not introduce additional fairness problems, but simply specifies existing trade-offs and makes them unavoidable.
+That is, Machine Learning often simply specifies existing trade-offs and makes them unavoidable.
 
 As a concrete example, take the problem of unbalanced training data causing the Machine Learning algorithm to reach better performance on over-represented groups.
 This problem is hidden, but still present, in unassisted medicine.
@@ -32,6 +32,7 @@ Less federated decisions make for less error-robust systems, and unified treatme
 Additionally, automated decision systems distribute the responsibility for the decisions the system takes, making it very difficult to attribute responsibility for potential misjudgments \cite[p.~6]{Morley2020}.
 If the decisions are not taken automatically, the practitioner might still rely too much on them and avoid a right call that would contradict the suggestion of the ML system \cite[p.~4]{Morley2020} (automation bias, \cite[p.~4]{Rajkomar2018}).
 Additionally, they might pay less attention to the decisions that are assisted by technology.
+The complex models of ML and the large amount of features used help make more personalized decisions for the individual, but decrease their understandability \cite[p.~4]{Rajkomar2018}.
 The lack of explainability of the decisions taken by automated systems might additionally contrast with the biomedical principle of the respect of autonomy, since it reduces the patient's possibility to exert informed consent \cite[p.~346]{Dijkstra2020}.
 Finally, the trust of the public in the decisions taken by automated decision systems may be low, making their large-scale use politically difficult \cite[p.~4]{Morley2020}.
 
@@ -46,12 +47,32 @@ Secondly, it forces the developers of the system to choose precise weights for t
 Thirdly, it makes the goals and evaluation metrics (and their implied definition of what a ``good'' solution looks like) clear.
 Knowing that those goals influence the results, with for example pure efficiency potentially leading to the propagation of health inequities \cite[p.~2]{Rajkomar2018}, the importance of each objective has to be decided upon (and hence, the chosen position on the Pareto frontier).
 
+\subsection{New trade-offs}
+The use of ML as assisting systems rather than replacements of clinicians altogether complicates the discussion about biases further.
+The end effect of the integration of ML tools in medical practice is a complex function of the interaction of their results and their usage by clinicians on patients \cite[p.~4]{Rajkomar2018}.
+\idea{Maybe Julian's paragraph here?}
 
 
-\subsection{Advantage of inaction}
+
+
+\subsection{Advantage of inaction, and the sin of perfection}
 \idea{
     \begin{itemize}
         \item Positive versus negative harms: in doubt, do nothing.
         \item This reasoning is much harder to apply to critical problems as those emerging in medicine.
     \end{itemize}
+}
+\temp{
+The visceral resistance to the use of any technological system that shows any behavior deemed as unjust might be stopping improvements in overall care, and can be considered problematic.
+Do we want, for example, to refute to apply any system that does not lead to equalized outcomes \cite[p.~5]{Rajkomar2018} but only equalized benefit \cite[p.~5]{Rajkomar2018}?
+How do we justify keeping the unfair status quo by avoiding solutions that would improve care in general and stratified across sensitive groups, just because those solutions do not perfectly solve the problem?
+
+Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and to the possibility of being `wrong'.
+The empiricist's answer to this problem is to observe the effects of the decision and adapt his assumptions and knowledge based on them.
+The advantage of actively trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
+If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get.
+That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences.
+For example, actively trying to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and what the best approach is to solve them.
+A possible solution is hence to develop system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
+ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}.
 }
