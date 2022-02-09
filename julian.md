@@ -1,6 +1,7 @@
 ## How ML introduces trade-offs in medicine
 
-Interestingly, the deployment of machine learning methods in the medical context introduces new trade-offs into medicine - apart from the ones present in machine learning itself. 
+We have argued that there are no new fairness trade-offs at the intersection of machine learning and medicine but rather that that the preexisting ones are preserved, increased or decreased. However, the deployment of machine learning methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
+
 
 At least one study found that combining AI and human evaluation can achieve better results than either of the two on their own [^2]. The same study also found that especially for harder cases the assisted accuracy was very high compared to the unassisted accuracy when the ML model's prediction was correct, but that it was also painfully low in casse where the ML model's prediction was incorrect.
 
