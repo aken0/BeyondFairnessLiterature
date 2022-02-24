@@ -1,3 +1,31 @@
+## Structure
+
+#### Introduction
+
+#### Tradeoffs in general (Thomas?)
+
+From Lecture 1:
+
+- The loss function encodes what we care about. What do we want our model to be good at? How can we express this mathematically? 
+- Iverson brackets [[p]] = 1 if p is true, = 0 if p is false
+
+#### Tradeoffs in machine learning
+
+#### tradeoffs in Medicine
+
+#### tradeoffs at the intersection of machine learning and medicine (arthur & Julian)
+
+##### fairness tradeoffs are not new to medicine (arthur)
+
+##### but other (ethical?) tradeoffs are new (julian)
+
+#### conclusion
+
+## General (Introduction?)
+
+Clinical decision support systems (CDSSs) have been used since the 1980s with growing success [^7]. Only in recent years, the involvement of Machine Learning in those systems has led to a new regulatory situation.
+
+
 ## How ML introduces trade-offs in medicine
 
 We have argued that there are no new fairness trade-offs at the intersection of machine learning and medicine but rather that that the preexisting ones are preserved, increased or decreased. However, the deployment of machine learning methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
@@ -24,13 +52,24 @@ The developement and deployment of ML tools in medicine and health care will and
 Another trade-off exists between the way medical devices are traditionally approved for (clinical) applications and how software is usually deployed and constantly updated [^5]. While this problem might also exist with software that is already deployed in other ways in medicine and health care, ML tools take it to a new level. Here, updates might involve newly trained algorithms with a new data background which might have achieved different performance benchmarks. How should this agile updating be weighed against traditional and more accurate, but slower ways of approving tools for clinical application? In the US, the FDA already reacted by creating easier paths for approvement for this kind of software but the success of this pathway is still indeterminated.
 
 
+ML tools are said to be able to increase efficiency in hospitals and prevent unnecessary hospital visits, thus reducing pressure on care workers and doctors, which is certainly a good thing [^6]. However, it will be important to take a holistic approach towards health care in the future. ML tools are too often seen as the holy grail to solve problems when in fact they are just tools that will not tackle structural problems without using them to do so. For example, in current health care systems reduced workload of care workers has the potential to lead to a reduction in the workforce because it is a way to save money. However, this would then not lead to an actual improvement for patients but only to a potential financial reward. This can be seen as a trade-off between monetary outcomes and spendings on the one  and the patients experience and care on the other hand. While this is an issue that is already existing, ML tools bring another perspective to it since they have the potential to increase as well as heavily decrease the patients experience in hospitals.
 
+
+
+
+
+
+ - do we actually want automated speech therapy? [^ted3]
+ - If it is impossible to reach a conclusion, for example because there is not enough data, ML tools should be transparent about that and indicate that they cannot make a decision rather than making a bad informed decision [^6]
+ - the more ML tool and phsician interact, the harder it gets to identify responsibility (partly [^6])
+ - Today, regulation processes are often such that the model is locked in place before deployment. This makes it easier to regulate them but misses out on their potential to learn and increase functionality on the fly. [^ted1]
+ - Can digital health care be for everybody? what about people who do not have digital devices or don't want to use them? [^ted2]
  - In some cases, AI tools were shown to increase sensitivity but reduce specificity 
  - How much do physicians need to understand the tools they are using? ([^5] Education of an AI-literate workforce)
  - ethical question: should we predict death? ([^3] Table 3) [^5] talk about triage by ML
  - How do we study the clinical efficacy of ML tools? Is a randomized controlled trial ethical? Because with normal medical trials we do not have an alternative working treatment, we just compare it with nothing. Thus, we do not withhold something from patients. However, of ML tools (wrongfully) decide against treatment we actively withhold treatment from patients which might in extreme cases lead to their deaths. (Grote und Genin)
 
-
+- WTF?  The savings would come from a combination of deployments: lower medical costs and reduced losses from low productivity and sick day ([^6] page 148)
 
 
 [^1]: [AI in healthcare and medicine](https://www.nature.com/articles/s41591-021-01614-0#Sec9)
@@ -43,11 +82,22 @@ Another trade-off exists between the way medical devices are traditionally appro
 
 [^5]: [The practical implementation of artificial intelligence technologies in medicine](https://www.nature.com/articles/s41591-018-0307-0)
 
+[^6]: [Artificial Intelligence: Power for Civilisation – and for Better Healthcare](https://www.karger.com/Article/PDF/504785)
+
+[^7]: [An overview of clinical decision support systems: benefits, risks, and strategies for success](https://www.nature.com/articles/s41746-020-0221-y)
+
+
+
+[^ted1]: [Artificial intelligence in healthcare: opportunities and challenges | Navid Toosi Saidy | TEDxQUT](https://www.youtube.com/watch?v=uvqDTbusdUU)
+
+[^ted2]: [Artificial Intelligence in Healthcare - The Need for Ethics | Varoon Mathur | TEDxUBC](https://www.youtube.com/watch?v=4oPpSFp87iE)
+
+[^ted3]: [Artificial Intelligence Meets Mental Health Therapy | Andy Blackwell | TEDxNatick](https://www.youtube.com/watch?v=ZkTvw3usMw4)
+
+
 ## To read
 
- - https://www.karger.com/Article/PDF/504785
  - https://www.jmir.org/2019/5/e13216/
- - https://www.nature.com/articles/s41746-020-0221-y
  - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7437567/
  - https://link.springer.com/article/10.1186/s12911-020-01191-1
  - https://www.liebertpub.com/doi/pdfplus/10.1089/omi.2019.0038
@@ -58,5 +108,11 @@ Another trade-off exists between the way medical devices are traditionally appro
  - Sayres R, Taly A, Rahimy E, Blumer K, Coz D, Hammel N, et al. Using a deep learning algorithm and integrated gradients explanation to assist grading for diabetic retinopathy.
  - Char, D. S., Shah, N. H. & Magnus, D. Implementing machine learning in health care—addressing ethical challenges
  - Jiang, F. et al. Artificial intelligence in healthcare: past, present and future
+
+## read, but not cited
+
+ - https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0212356
+ - https://arxiv.org/pdf/2005.12378.pdf
+ - 
 
  
