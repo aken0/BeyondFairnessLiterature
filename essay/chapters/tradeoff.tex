@@ -1,12 +1,56 @@
-\subsection{Tradoffs Intro/in general}
-\begin{itemize}
-	\item Define tradeoffs as  inherently contradictory(trival for conflict as opposed to view that tradeoffs dont exist or should be avoided)
-	\item First derive mathematical formulation used in economics(pareto efficency and multi objective optimization)
-	\item Talk about tradeoffs in medicine/ethics in general
-	\item Then elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it shouldn't be)
-\end{itemize}
-\subsection{Tradeoffs in Medicine/Ethics}
-\subsubsection{Patient-Tradeoff}
+\subsection{Trade-offs Intro/in general}
+	\subsubsection{Define tradeoffs as  inherently contradictory(trivial for conflict as opposed to view that tradeoffs dont exist or should be avoided)}
 
-\subsubsection{}
+
+	The notion of a tradeoff describes a decision between multiple (usually mutually contradictory) objectives, in the sense that a gain in one objective results in loss in one or more other objectives.
+	The concept of trade-offs is very common in everyday life, \dots
+
+	\dots
+	
+	But in economics especially, trade-offs play a huge role and there have been multiple approaches to formalize them.
+
+	\subsubsection{First derive mathematical formulation used in economics(pareto efficiency and multi objective optimization)}
+
+	To approach choosing a feasible decision (allocation) for various types of trade-off we will introduce multi-objective optimization.
+	A general multi-objective optimization problem can be written in the following way:
+	$$min(u_1), \quad s.t. x\in X$$
+	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function for each dimension.
+	For a non-trivial multi-objective optimization problem it is not possible to minimize every single objective function at the same time.
+	Thus the notion of Pareto optimality is introduced:
+	A decision $x\in X$ is said to Pareto dominate another solution $x'\in X$ if the following both hold:
+	$$1.\quad u_i(x)\le u_i(x'), \forall i\in {1,2,\dots,k}$$
+	$$2. \quad u_j(x) < u_j(x'), \forall j\in {1,2,\dots,k}$$
+
+	Such a decision is also called Pareto optimal/Pareto efficient.
+	The set of all Pareto optimal decisions is called the Pareto front.
+	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way:
+	The objectives are the axes in a 2D plane, moving along the Pareto front showcases how increasing one objective decreases the other one[maybe add a figure here with example caption (accuracy fairness seems good)].
+	Note that Pareto optimality does not ensure a morally right decision in any sense (change this).\dots
+
+	But the concept of Pareto optimality alone usually won't actually leave us with a single optimal or "best" answer to our decision problem.
+	Rather, the approach eliminates all "strictly worse" possible decisions in the feasible set and the decision maker is faced with a new problem.
+	To now choose one solution from the Pareto front multiple methods can be used.
+	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (knowledge/preference).
+
+	\dots
+
+
+	\subsubsection{Talk about tradeoffs in medicine/ethics in general}
+	As already hinted to earlier, tradeoffs play a central role in medicine.
+	They can appear in different areas in the field, be it at high level healthcare policy decisions or when considering treatment options for one specific patient.
+	Sometimes those tradeoffs arise when the decision involves a moral or ethical dilemma:
+	If for example the administration of a treatment could harm the patient as a side effect one might still choose to treat the disease if it is the lesser evil (e.g. chemotherapy[cite]).
+	In this case the the physician faces multiple tradeoffs:
+	He has to consider the effectiveness of the administered treatment (which is uncertain for the given patient) the likelihood and magnitude of possible adverse side-effect (which are also uncertain for the given patient).
+	He also has to consider \dots
+	
+	By applying the concept of Pareto optimality one could even say that any decision that doesn't involve a tradeoff of some sort would be trivial to make, because it would have a unique maximum.
+	Of course it would be desirable to avoid many of the tradeoffs in the sense of maximizing all objectives simultaneously, but that maximizing solution might not be in the feasible set, i.e. a possible decision at the given time.
+
+	\dots
+
+	
+
+	\subsubsection{elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it shouldn't be)}
+
 \subsection{Beyond Pareto}
