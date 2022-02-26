@@ -7,6 +7,12 @@
 \usepackage[style=numeric-comp]{biblatex}
 \addbibresource{Resources/bibliography.bib}
 
+
+%%% Custom definitions %%%
+% Shorthands
+\newcommand{\ie}{i.\@e.\@}
+\newcommand{\eg}{e.\@g.\@}
+\newcommand{\wrt}{w.\@r.\@t.~}
 \newcommand{\idea}[1]{\color{blue}{#1}\color{black}}
 \newcommand{\temp}[1]{\color{green}{#1}\color{black}}
 
@@ -45,8 +51,8 @@
 \section{Introduction}
 \input{chapters/introduction}
 
-\section{Trade-offs in machine learning and automated systems}
-\input{chapters/ml}
+\section{Trade-offs part}
+\input{chapters/tradeoff.tex}
 
 \section{Trade-offs in medicine}
 \input{chapters/medicine}
@@ -54,11 +60,11 @@
 \section{Combining machine learning and medicine}
 \input{chapters/combination}
 
-\section{Trade-off part}
-\input{chapters/tradeoff.tex}
-
 \section{Conclusions}
 \input{chapters/conclusion}
+
+\section{Arthur's ideas}
+\input{chapters/arthur_ideas.tex}
 \clearpage
 
 

@@ -1,7 +1,7 @@
 \subsection{Old and new problems}
 As discussed in the previous sections, the practical problem of applying Machine Learning to health care tasks carries with it a certain number of unavoidable decisions about the relative importance of contrasting principles.
 In short, trade-offs have to be made.
-In this essay, we concentrate on trade-offs related with fairness considerations.
+In the previous sections, we concentrated on trade-offs related with fairness considerations.
 An interesting aspect of such trade-offs is their origin: what are their causes?
 We argue that many fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
 \idea{Look for resources in Bob's technology lecture.}
@@ -26,7 +26,7 @@ In short, the trade-offs we analyzed (group fairness and individual fairness, pr
 That is, they are not inherent to the technology used to solve them, ML, but to the goals and requirements of the system.
 ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite[p.~2]{Rajkomar2018}.
 
-We do not, however, argue that ML does not introduce any new ethical problems, but that they are not fairness-related.
+We do not, however, argue that ML does not introduce any new ethical problems, but that strictly fairness-related problems pre-exist the proposed algorithmic solutions.
 For example, ML systems applied at a large scale unify decisions, exponentially increasing the impact of failures.
 Less federated decisions make for less error-robust systems, and unified treatment and strategy gives fewer indications about what works well, potentially reducing the possibilities for learning from single experiences.
 Additionally, automated decision systems distribute the responsibility for the decisions the system takes, making it very difficult to attribute responsibility for potential misjudgments \cite[p.~6]{Morley2020}.
@@ -46,13 +46,13 @@ Firstly, it imposes the need for precise definitions of what is meant by terms l
 Secondly, it forces the developers of the system to choose precise weights for the principles that they want to respect, and explicitly accept the existence of trade-offs that are inherent to the problem.
 Thirdly, it makes the goals and evaluation metrics (and their implied definition of what a ``good'' solution looks like) clear.
 Knowing that those goals influence the results, with for example pure efficiency potentially leading to the propagation of health inequities \cite[p.~2]{Rajkomar2018}, the importance of each objective has to be decided upon (and hence, the chosen position on the Pareto frontier).
+To summarize these advantages, we can say that ML, despite the typical complaints about its inscrutability, in a way helps enforce the transparency of the decisions taken.
+This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely.
 
 \subsection{New trade-offs}
 The use of ML as assisting systems rather than replacements of clinicians altogether complicates the discussion about biases further.
 The end effect of the integration of ML tools in medical practice is a complex function of the interaction of their results and their usage by clinicians on patients \cite[p.~4]{Rajkomar2018}.
-\idea{Maybe Julian's paragraph here?}
-
-
+\idea{Julian's paragraph here}
 
 
 \subsection{Advantage of inaction, and the sin of perfection}
@@ -70,9 +70,24 @@ How do we justify keeping the unfair status quo by avoiding solutions that would
 Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and to the possibility of being `wrong'.
 The empiricist's answer to this problem is to observe the effects of the decision and adapt his assumptions and knowledge based on them.
 The advantage of actively trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
-If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get.
+If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get (see lecture 12, slide 5).
 That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences.
 For example, actively trying to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and what the best approach is to solve them.
 A possible solution is hence to develop system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
 ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}.
+However, the dynamics of the entire ecosystem make it very difficult to predict its evolution.
+Furthermore, very little work has been done in ML to assess the evolution of the data distribution when decisions are taken by ML systems adjusted for fairness.
+Economics literature in affirmative action may be helpful in analyzing the problem \cite{Chouldechova2020}.
+}
+
+\idea{
+    Draw on ``How humans judge machines.''
+}
+
+\idea{
+    Data `set' notion, necessity to accept bias in data, data as a time-dependent snapshot, evolution, effects of interventions, dynamics, \dots.
+}
+
+\idea{
+    Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.
 }
