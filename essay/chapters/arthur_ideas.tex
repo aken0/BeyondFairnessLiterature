@@ -1,55 +1,60 @@
 \subsection{tradeoffs, or maybe introduction?}
+\textbf{multiple objectives motivation}
+We identify three axes of conflict when implementing fairness into ML systems.
+Firstly, assuring privacy requires modifying the data (thus removing information), which probably leads to a deterioration of prediction accuracy.
+(cite \eg https://www.nature.com/articles/d41586-020-02454-7).
+\idea{Non-maleficience, trade-off \cite{Dijkstra2020}.}
+Secondly, the typical implementation of fairness into ML systems is done in the form of group fairness measures, \ie, requires the separation of people into groups, usually by so-called sensitive attributes.
+This leads to a conflict between individual fairness, with individuals wishing to be judged independently of their group identity, and group fairness, which tries to correct for supposed historical and data biases.
+It further raises constraints of group belonging and typicality (is it advantageous to be ``average'' in its own group?).
 \idea{
-    \textbf{multiple objectives motivation}
-    We identify three axes of conflict when implementing fairness into ML systems.
-    Firstly, assuring privacy requires modifying the data (thus removing information), which probably leads to a deterioration of prediction accuracy.
-    (cite \eg https://www.nature.com/articles/d41586-020-02454-7).
-    \temp{Non-maleficience, trade-off \cite{Dijkstra2020}.}
-    Secondly, the typical implementation of fairness into ML systems is done in the form of group fairness measures, \ie, requires the separation of people into groups, usually by so-called sensitive attributes.
-    This leads to a conflict between individual fairness, with individuals wishing to be judged independently of their group identity, and group fairness, which tries to correct for supposed historical and data biases.
-    It further raises constraints of group belonging and typicality (is it advantageous to be ``average'' in its own group?).
     (Discuss Binns).
     Use slideset 9, slide 22 for Binns comment.
+}
+\temp{
     Individual justice ideas seem to go exactly in the opposite direction of "Explainable AI", since they basically say that concepts that can not be put into words should be used to base a decision.
     In general, Explainable AI requirements contrast with "AI cannot make human-like judgements".
-    \temp{
-        The elements to take into account when deciding on what metric of fairness to use are multiple.
-        On the one hand, we need to decide what moral principles we want to follow, i.~e.~what we intend by equal or just treatment.
-        What do we consider distributive justice?
-        What is the resource that has to be distributed?
-        Do we care about the end-result, or only about promising equal expectancies?
-        On the other hand, we have to provide a model about the sources of unfairness in the data and model we use.
-        In ML terms, we have to state our assumptions about the data-generating process.
-        For example, assuming historical bias means putting into question the validity of the training labels, and hence accuracy on them as a performance measure \cite[p.~6]{Rajkomar2018}.
-
-        \begin{itemize}
-            \item Why we think Binns 2020 does not cancel the problem.
-                    cp. ``Given the epistemic uncertainty surrounding the association between protected identities and health outcomes, the use of fairness solutions can create empirical challenges'' \cite[e221]{Mccradden2020}.
-                    negative legacy, labeling prejudice, sample selection bias \cite[p.~6]{Chen2021}.
-            \item Specificity of medicine: groups sometimes DO matter in the prediction. ``difference does not always entail inequality. In some instances, it is appropriate to incorporate differences between identities because there is a reasonable presumption of causation'' \cite[e221]{Mccradden2020}
-                    Importance of the ``causal structure between latent biological factors such as ancestry and their associated diseases across ethnic subpopulations'' \cite[p.~3]{Chen2021}.
-            \item ML systems have the (demonstrated in practice) potential to discriminate, even if group information is not included, through for example leakage of ethnicity, which is then used as a shortcut to make the predictions (reproducing, or even amplifying, historical bias) \cite[p.~3]{Chen2021}.
-                    For this reason, so-called fairness through unawareness is insufficient in non-discrimination. \cite[p.~5]{Chen2021}.
-        \end{itemize}
-    }
-    Thirdly, transforming the objective from a single objective of performance to a multiple objective of performance and fairness leads to in general worst performance.
-    We thus arrive at a trade-off between prediction accuracy (or whatever performance measure is used: sensitivity, specificity) and fairness.
+    The elements to take into account when deciding on what metric of fairness to use are multiple.
+    On the one hand, we need to decide what moral principles we want to follow, i.~e.~what we intend by equal or just treatment.
+    What do we consider distributive justice?
+    What is the resource that has to be distributed?
+    Do we care about the end-result, or only about promising equal expectancies?
+    On the other hand, we have to provide a model about the sources of unfairness in the data and model we use.
+    In ML terms, we have to state our assumptions about the data-generating process.
+    For example, assuming historical bias means putting into question the validity of the training labels, and hence accuracy on them as a performance measure \cite[p.~6]{Rajkomar2018}.
+}
+\idea{
+    \begin{itemize}
+        \item Why we think Binns 2020 does not cancel the problem.
+                cp. ``Given the epistemic uncertainty surrounding the association between protected identities and health outcomes, the use of fairness solutions can create empirical challenges'' \cite[e221]{Mccradden2020}.
+                negative legacy, labeling prejudice, sample selection bias \cite[p.~6]{Chen2021}.
+        \item Specificity of medicine: groups sometimes DO matter in the prediction. ``difference does not always entail inequality. In some instances, it is appropriate to incorporate differences between identities because there is a reasonable presumption of causation'' \cite[e221]{Mccradden2020}
+                Importance of the ``causal structure between latent biological factors such as ancestry and their associated diseases across ethnic subpopulations'' \cite[p.~3]{Chen2021}.
+        \item ML systems have the (demonstrated in practice) potential to discriminate, even if group information is not included, through for example leakage of ethnicity, which is then used as a shortcut to make the predictions (reproducing, or even amplifying, historical bias) \cite[p.~3]{Chen2021}.
+                For this reason, so-called fairness through unawareness is insufficient in non-discrimination. \cite[p.~5]{Chen2021}.
+    \end{itemize}
+}
+Thirdly, transforming the objective from a single objective of performance to a multiple objective of performance and fairness leads to in general worst performance.
+We thus arrive at a trade-off between prediction accuracy (or whatever performance measure is used: sensitivity, specificity) and fairness.
+\idea{
     \begin{itemize}
         \item Specificity of medicine: allocation of physical benefits and harms. Non-maleficience?
         \item ``difference between an idealised model and non-ideal, real-world behavior affects metrics of model performance (\eg, specificity, sensitivity) and clinical utility in practice.'' \cite[e221]{Dijkstra2020}.
     \end{itemize}
+}
 
+\idea{
     Why not concentrate on one tradeoff? All must be approached when the solution is implemented.
     Must be considered together, since they are not orthogonal axes. Eg., privacy might mean reducing the individual even more to group characteristics.
     Additionally, privacy and fairness might be in conflict: targeted data collection to correct data biases ``may pose ethical and privacy concerns as a result of additional surveillance'' \cite[p.~8]{Chen2021}.
-
-    \textbf{Trade-offs as inevitable features of decision problems}
-    On a broad view, trade-offs are the basic problem of human governance.
-    How many resources we allocate for one problem, leaving less for another one.
-    (Almost) every decision has positive and negative effects.
-    So subjectivity is always present, and we all accept (if only implicitly) the existence of trade-offs in every decision. 
-    Trade-offs are intuitively understood from a young age, and encompass all human decision-making, but also biology, evolutionary theory, and more precisely the human body \cite{Launer20200}.
 }
+
+\textbf{Trade-offs as inevitable features of decision problems}
+On a broad view, trade-offs are the basic problem of human governance.
+How many resources we allocate for one problem, leaving less for another one.
+(Almost) every decision has positive and negative effects.
+So subjectivity is always present, and we all accept (if only implicitly) the existence of trade-offs in every decision. 
+Trade-offs are intuitively understood from a young age, and encompass all human decision-making, but also biology, evolutionary theory, and more precisely the human body \cite{Launer20200}.
 
 
 
@@ -80,6 +85,8 @@
     In fact, one can go as far as to ``conceptualize medicine itself as the art of managing trade-offs'' \cite{Launer2020}.
     From the doctor's allocation of time to specific patients, to the risk of switching to a new potentially better treatment, to the decision of how aggressively to treat terminal patients, every hard decision a medical practitioner has to take entails a trade-off.
 
+    While we concentrated above on the decisions the single practitioner has to make, health care itself, as part of governance, is ridden with trade-offs.
+    Health care systems themselves are administrated according to trade-offs, both as part of the overall governance budget and within the system (what to prioritize, what costs to cover, etcetera) \cite{Dionne2018}. \idea{Read the article, specify.}
     \paragraph{Principles of medical bioethics}
     A good starting point for ethical discussions in medicine are the well-established guiding principles in biomedical ethics proposed by Beauchamp and Childress: respect for autonomy, beneficence, non-maleficence and justice \cite[pp.~344-345]{Dijkstra2020}, \cite[p.~2]{Morley2020}, \cite[p.~2]{Rajkomar2018}.
 
