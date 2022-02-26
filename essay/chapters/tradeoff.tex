@@ -11,10 +11,10 @@
 
 	\subsubsection{First derive mathematical formulation used in economics(pareto efficiency and multi objective optimization)}
 
-	To approach choosing a feasible decision (allocation) for various types of trade-off we will introduce multi-objective optimization.
+	To approach choosing an optimal feasible decision (allocation) for various types of trade-offs we will introduce multi-objective optimization.
 	A general multi-objective optimization problem can be written in the following way:
 	$$min(u_1), \quad s.t. x\in X$$
-	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function for each dimension.
+	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function representing each dimension.
 	For a non-trivial multi-objective optimization problem it is not possible to minimize every single objective function at the same time.
 	Thus the notion of Pareto optimality is introduced:
 	A decision $x\in X$ is said to Pareto dominate another solution $x'\in X$ if the following both hold:
@@ -22,9 +22,13 @@
 	$$2. \quad u_j(x) < u_j(x'), \forall j\in {1,2,\dots,k}$$
 
 	Such a decision is also called Pareto optimal/Pareto efficient.
+	Any Pareto optimal decision cannot be further improved for one objective unilaterally without resulting in loss in one or more other objectives.
 	The set of all Pareto optimal decisions is called the Pareto front.
 	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way:
-	The objectives are the axes in a 2D plane, moving along the Pareto front showcases how increasing one objective decreases the other one[maybe add a figure here with example caption (accuracy fairness seems good)].
+	The objectives are the axes in a 2D plane, moving along the Pareto front showcases how increasing one objective decreases the other one
+
+	[add a figure here with caption (accuracy fairness)].
+
 	Note that Pareto optimality does not ensure a morally right decision in any sense (change this).\dots
 
 	But the concept of Pareto optimality alone usually won't actually leave us with a single optimal or "best" answer to our decision problem.
@@ -33,6 +37,14 @@
 	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (knowledge/preference).
 
 	\dots
+
+
+	\subsubsection{Tradeoffs in ML}
+	\begin{itemize}
+	\item Accuracy vs. Fairness
+	\item Group vs Individual Fairness
+	\item Accuracy vs. Privacy
+	\end{itemize}
 
 
 	\subsubsection{Talk about tradeoffs in medicine/ethics in general}
@@ -51,6 +63,4 @@
 
 	
 
-	\subsubsection{elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it shouldn't be)}
-
-\subsection{Beyond Pareto}
+	elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it shouldn't be)
