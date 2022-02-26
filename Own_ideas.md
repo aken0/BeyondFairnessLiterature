@@ -1,12 +1,4 @@
 \# I (Arthur) use this file to write down some own ideas that come to me while reading and might fit in the paper.
 
 1. What about seeing the problem from a different perspective, and make the default solution having two different models for the two different groups? If integration of the data from the second group increases performance, arguably the first group "gained something" even if the performance is lower on them.  
-2. Not really an idea, but a general underlying theme: pay attention to make a comparison to the current situation with human deciders/analysts and see if the problem already exists there. For example, unbalanced data: arguably a medical practitioner deciding based on their experience will also have better performance on/overfit the majority class. ML with cost functions allows to weigh examples in a way that arguably the human mind cannot.  
-3. Linked to the above: on a broader view, trade-offs are the basic problem of human governance. How much resources we allocate for one problem, leaving less for another one. (Almost) every decision has positive and negative effects. So subjectivity is always present and we all accept (if only implicitly) the existence of trade-offs in every decision.  
-4. The fact that ML requires precise definitions of the goal is an advantage in terms of transparency over human-centered solutions.  
-5. Introduction idea: we looked until now at allocation of positive goods. This might be different from prevention of harm, eg in healthcare settings. Idea: harm distribution is different from benefit distribution. Medicine is a setting where group differences are important.  
-6. Trying to ensure equal harms in a setting where medicine can very well solve one group's problems seems illogical.  
-7. In the moment we accept the data is false (mislabeled because of historical bias, following from injustice) or incomplete, we accept the problem is not perfectly solvable. We need to insert additional assumptions about how the data should look like, where the errors lie, ...  
-8. Individual justice ideas seem to go exactly in the opposite direction of "Explainable AI", since they basically say that concepts that can not be put into words should be used to base a decision. In general, Explainable AI requirements contrast with "AI cannot make human-like judgements".  
-9. The "advantage of being average".  
-
+7. From the moment we accept the data is false (mislabeled because of historical bias, following from injustice) or incomplete, we accept the problem is not perfectly solvable. We need to insert additional assumptions about how the data should look like, where the errors lie, ...   
