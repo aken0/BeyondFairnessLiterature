@@ -3,11 +3,12 @@
 
 
 	The notion of a tradeoff describes a decision between multiple (usually mutually contradictory) objectives, in the sense that a gain in one objective results in loss in one or more other objectives.
-	The concept of trade-offs is very common in everyday life, \dots
+	The concept of trade-offs is very common in everyday life, \dots (one short example, not too informal)
 
 	\dots
 	
 	But in economics especially, trade-offs play a huge role and there have been multiple approaches to formalize them.
+	One such approach, that is so widespread and commonly used that it could be regarded as a convention, is Pareto Optimality.
 
 	\subsubsection{First derive mathematical formulation used in economics(pareto efficiency and multi objective optimization)}
 
@@ -29,21 +30,30 @@
 
 	[add a figure here with caption (accuracy fairness)].
 
-	Note that Pareto optimality does not ensure a morally right decision in any sense (change this).\dots
+	Note that Pareto optimality doesn't ensure anything beyond the property derived above.
+	In particular it doesn't provide any guarantees about a "fair" or normative allocation or decision.
+
+	\dots
 
 	But the concept of Pareto optimality alone usually won't actually leave us with a single optimal or "best" answer to our decision problem.
 	Rather, the approach eliminates all "strictly worse" possible decisions in the feasible set and the decision maker is faced with a new problem.
 	To now choose one solution from the Pareto front multiple methods can be used.
 	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (knowledge/preference).
 
-	\dots
+	How to choose along pareto front (how to solve)
+
+	\begin{itemize}
+	\item a priori, incorporating priors like knowledge/preference/best practices/experience
+	\item a posteriori
+	\item other MCDM approaches
+	\end{itemize}
 
 
 	\subsubsection{Tradeoffs in ML}
 	\begin{itemize}
-	\item Accuracy vs. Fairness
-	\item Group vs Individual Fairness
-	\item Accuracy vs. Privacy
+		\item Accuracy vs. Fairness (Cost of Fairness in binary classification) 
+		\item Group vs Individual Fairness
+		\item Accuracy vs. Privacy
 	\end{itemize}
 
 
@@ -61,6 +71,4 @@
 
 	\dots
 
-	
-
-	elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it shouldn't be)
+	elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it maybe shouldn't be)
