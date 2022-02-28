@@ -15,14 +15,14 @@
 	\subsection{Multi-objective optimization and Pareto efficiency}
 
 	To approach choosing an optimal feasible decision (allocation) for various types of trade-offs we will introduce multi-objective optimization.
-	A general multi-objective optimization problem can be written in the following way:
-	$$min(u_1), \quad s.t.\; x\in X$$
-	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function representing each dimension.
+	A general multi-objective optimization problem $F$ can be written in the following way:
+	$$min \; F(x)=(u_1(x),\dots,u_k(x)), \quad s.t.\; x\in X$$
+	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function representing the $k$ dimensions.
 	For a non-trivial multi-objective optimization problem it is not possible to minimize every single objective function at the same time.
 	Thus the notion of Pareto optimality is introduced:
 	A decision $x\in X$ is said to Pareto dominate another solution $x'\in X$ if the following both hold:
-	$$1.\quad u_i(x)\le u_i(x'), \forall i\in {1,2,\dots,k}$$
-	$$2. \quad u_j(x) < u_j(x'), \forall j\in {1,2,\dots,k}$$
+	$$1.\quad \forall\; i\in {1,2,\dots,k}: u_i(x)\le u_i(x')$$
+	$$2.\quad \exists\; j\in {1,2,\dots,k}: u_j(x) < u_j(x')$$
 
 	Such a decision is also called Pareto optimal or Pareto efficient.
 	Any Pareto optimal decision cannot be further improved for one objective unilaterally without resulting in loss in one or more other objectives.
@@ -31,18 +31,29 @@
 	The objectives are the axes in a 2D plane, moving along the Pareto front showcases how increasing one objective decreases the other one
 
 	[add a figure here with caption (accuracy fairness)].
+	\begin{figure}
+	\begin{center}
+			
+	\begin{tikzpicture}
+    \begin{axis}[ticks=none,ylabel={Accuracy}, xlabel={Fairness}]
+		\addplot[domain=.5:8] {4/x};
+    \end{axis}
+	\end{tikzpicture}
+	\caption{placeholder}
+	\end{center}
+	\end{figure}
 
 	Note that Pareto optimality doesn't ensure anything beyond the property derived above.
 	In particular it doesn't provide any guarantees about a "fair" or normative allocation or decision.
 
 	\dots
 
-	But the concept of Pareto optimality alone usually won't actually leave us with a single optimal or "best" answer to our decision problem.
+	But the concept of Pareto optimality alone won't result in a single optimal or "best" answer to our decision problem.
 	Rather, the approach eliminates all "strictly worse" possible decisions in the feasible set and the decision maker is faced with a new problem.
-	To now choose one solution from the Pareto front multiple methods can be used.
+	She now has to choose one solution (decision) from the Pareto front.
 	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (knowledge/preference).
 
-	How to choose along pareto front (how to solve)
+	How to choose along pareto front (how to solve)\dots
 
 	\begin{itemize}
 	\item a priori, incorporating priors like knowledge/preference/ 
@@ -52,13 +63,44 @@
 	\end{itemize}
 
 
-	\subsection{Tradeoffs in ML}
-	Next we are going to characterize three main fairness related tradeoffs in machine learning systems:
+	\idea{Tuning via "knobs" (lecture 3) is also just travelling along pareto front}
+
+	\subsection{Tradeoffs in fair Machine Learning}
+	As with any technology [cite] there are many tradeoffs inherent in machine learning systems and algorithms.
+
+	\dots (maybe three axes of conflict arthur part)
+
+	Here we are going to characterize three fairness related tradeoffs in machine learning systems:
+	
 	\paragraph{Accuracy vs. Fairness (Cost of Fairness in binary classification)}
-	The accuracy and fairness tradeoff is a 
+	Prediction accuracy is a very desirable property in machine learning systems, maximizing it is often the primary goal.
+	Fair machine learning is concerned with identifying and mitigating bias and discrimination of sensitive attributes in ML systems.
+	Ideally we would like to achieve optimal accuracy while not discriminating with respect to any sensitive feature.
+	But as demonstrated in e.g. \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} empirically, avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
+	
+	\dots
+
+
+	Furthermore, \cite{menon2018cost} showcases that this tradeoff is a property inherent in the data and doesn't depend on the algorithm used when 
+	
+	\dots thresholding and bayes optimal classifier in williamson paper
+
+	Here the tradeoff depends on the "alignment" of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated ensuring fairness results in huge losses in accuracy.
+	Conversely, if the sensitive feature and the label are independent of each other we can achieve perfect fairness while retaining the full accuracy.
+	
+	To guarantee a certain amount of fairness, subject to a certain fairness measure,  	
+
+	If we consider the Pareto front of the accuracy and fairness tradeoff (compare [] and []), we 
+
+
 	\paragraph{Group vs Individual Fairness}
 	
 	\paragraph{Accuracy vs. Privacy}
+	Privacy, just like fairness, is another information based harm [cite lecture?], although they 
+
+	\dots
+
+
 
 	\subsection{Talk about tradeoffs in medicine/ethics in general}
 	As already hinted to earlier, tradeoffs play a central role in medicine.
