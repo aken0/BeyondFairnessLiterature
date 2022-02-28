@@ -8,7 +8,10 @@
     In the previous sections, we concentrated on trade-offs related with fairness considerations.
     An interesting aspect of such trade-offs is their origin.
     We argue that many fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
-    That is, Machine Learning often simply specifies existing trade-offs and makes them unavoidable.
+    This means that the analysis of fairness is necessarily domain-dependent, and in our case must draw on medical ethics literature.
+    Hence, we suggest abstracting from Machine Learning itself and regard it as a general technology used to solve a pre-existing problem.
+    The ethical considerations will hence be based on both medical ethics (to allow for domain-dependence) and philosophy of technology, recognizing the interaction between our behavior and the technology we use \cite{Dijkstra2020}.
+    Our reason to, on a first analysis, disregard the specifics of Machine Learning is that in many cases, Machine Learning often simply specifies existing trade-offs and makes them unavoidable.
 
     As a concrete example, take the problem of unbalanced training data causing the Machine Learning algorithm to reach better performance on over-represented groups.
     This problem is hidden, but still present, in unassisted medicine.
@@ -30,10 +33,8 @@
     ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite[p.~2]{Rajkomar2018}.
 
 
-\subsection{Clarification of problems}
-    \idea{
-        Main point: the mathematical rigor of ML forces us to think about those problems; this is a positive feature and not a disadvantage.
-    }
+
+\subsection{Potential benefits and the sin of perfection}
     How can ML actively help advance health equity and fairness?
     Firstly, it imposes the need for precise definitions of what is meant by terms like ``discrimination'', ``equity'', and so on.
     Secondly, it forces the developers of the system to choose precise weights for the principles that they want to respect, and explicitly accept the existence of trade-offs that are inherent to the problem.
@@ -41,14 +42,8 @@
     Knowing that those goals influence the results, with for example pure efficiency potentially leading to the propagation of health inequities \cite[p.~2]{Rajkomar2018}, the importance of each objective has to be decided upon (and hence, the chosen position on the Pareto frontier).
     To summarize these advantages, we can say that ML, despite the typical complaints about its inscrutability, in a way helps enforce the transparency of the decisions taken.
     This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely.
-
-\subsection{New trade-offs}
-    The use of ML as assisting systems rather than replacements of clinicians altogether complicates the discussion about biases further.
-    The end effect of the integration of ML tools in medical practice is a complex function of the interaction of their results and their usage by clinicians on patients \cite[p.~4]{Rajkomar2018}.
-    \idea{Julian's paragraph here}
-
-
-\subsection{Advantage of inaction, and the sin of perfection}
+    Let us reiterate this point: in many cases, ML technologies would simply assist or replace human decision-makers, so the analysis of their impact must be relative to the current human decision-making, and not an absolute decision about whether they act `perfectly fairly' or not.
+    
     \idea{
         \begin{itemize}
             \item Positive versus negative harms: in doubt, do nothing.
@@ -84,3 +79,12 @@
     \idea{
         Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.
     }
+
+
+
+\subsection{New trade-offs}
+    Until now, we argued that most of the problems identified by the Fair-ML community pre-exist the application of Machine Learning to health.
+    However, we can identify some issues that arise specifically from the combination of medicine and Machine Learning.
+    In particular, the use of ML as assisting systems rather than replacements of clinicians altogether complicates the discussion about biases further.
+    The end effect of the integration of ML tools in medical practice is a complex function of the interaction of their results and their usage by clinicians on patients \cite[p.~4]{Rajkomar2018}.
+    \idea{Julian's paragraph here}
