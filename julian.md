@@ -24,9 +24,13 @@ From Lecture 1:
 
 ## General (Introduction?)
 
-Clinical decision support systems (CDSS) have been used since the 1980s with growing success [^7]. Only in recent years, the involvement of Machine Learning in those systems has led to a new regulatory situation. Still, their deployment and success can tell us a lot about the way to go with ML tools. For example, although closed loop systems, i.e., systems were every step of the process from diganosis to drug intake is computerized and monitored, do already exist they are not commonly used, partly due to costs but certainly also due to the involved surveillance environment for patients [^7]. 
+Machine Learning (ML) in health care and medicine has grown to be one of the most discussed, but also most promising applications of the ever-growing technology of ML. In recent years, more and more research has shown ML to be an effective way of supporting health care practitioners in a great diversity of ways [^1] [^3]. However, there is also growing concern about the implications the deployment of ML has for the future of health care and medicine. 
 
-As many scholars make clear, ML and AI tools will not replace clinicians in the near future but rather be integrated as support systems, for example as CDSS [^a1].
+While there are ongoing public discussions about ML replacing humans as workers in many different ways [citation needed], many scholars have made clear that ML and AI tools will not replace clinicians in the near future but rather be integrated as support systems, for example as clinical decision support systems (CDSS) [^a1].
+
+CDSS have been used since the 1980s with growing success [^7]. Only in recent years, the involvement of Machine Learning in those systems has led to a new regulatory situation. Still, their deployment and success can tell us a lot about the way to go with ML tools. For example, although closed loop systems, i.e., systems were every step of the process from diganosis to drug intake is computerized and monitored, do already exist they are not commonly used, partly due to costs but certainly also due to the involved surveillance environment for patients [^7]. 
+
+
 
 
 ## Arthur
@@ -45,7 +49,7 @@ Finally, the trust of the public in the decisions taken by automated decision sy
 
 ## How ML introduces trade-offs in medicine
 
-We have argued that there are no new fairness trade-offs at the intersection of machine learning and medicine but rather that that the preexisting ones are preserved, increased or decreased. However, the deployment of machine learning methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
+We have argued that there are no new fairness trade-offs at the intersection of machine learning and medicine but rather that the preexisting ones are preserved, increased or possibly decreased. However, the deployment of machine learning methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
 
 ML tools in medicine are often discussed as a human vs. machine situation - where the ML tool outperforms the human they should and in the near future will be substituted. However, making a binary decision out of this does not seem to be the optimal solution. Different studies found that combining AI and human evaluation can achieve better results than either of the two on their own ([^1] [^2] [^3] Steiner). One of those studies also found that especially for harder cases the assisted accuracy was very high compared to the unassisted accuracy when the ML model's prediction was correct, but that it was also painfully low in cases where the ML model's prediction was incorrect [^2]. So instead of a binary decision we are left with a new situation that fits our understanding of trade-offs. How are ML and human evaluation best combined to achieve the optimal accuracy? This might heavily depend on the task at hand. For example, for skin cancer classification where the input is only a cropped image of the potential carcinoma or melanoma, the algorithms decision alone might the enough. However, for identifying diseases in a breast X-ray, a much broader task than skin cancer classification, algorithmic and human judgement might need to be combined for the optimal solution.
  maybe more AI for less experienced, less AI for more experienced? This is a behavior that was already found for CDSS without ML components, where more experienced doctors were shown to ignore the assistance more often [^7].
@@ -81,6 +85,7 @@ Another Trade-off can be seen between empathy in human practitioners and a more 
 
 Health care systems around the world are more or less privatized, depending on the country. However, in the case of ML tools a lot of research and development is driven by big companies like Alphabet or IBM [^a1]. This makes sense since those componies are driving ML research in general but it poses the question whether we want to give such an important issue completely out of public and into private hands. While the privatization of health care was already posing problems before ML tools and they are in fact seen as a solution for the existing problems [^a1] [^3], the questioning of privacy and trust is increased as well. Thus, this can be seen as a trade-off between the speed of development - arguably, big tech companies will be fast in bringing ML tools to the market - and privacy and trust issues.
 
+----------------------
 
 
  - do we actually want automated speech therapy? [^ted3]
