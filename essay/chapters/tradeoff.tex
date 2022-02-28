@@ -1,20 +1,21 @@
-\subsection{Trade-offs Intro/in general}
-	\subsubsection{Define tradeoffs as  inherently contradictory(trivial for conflict as opposed to view that tradeoffs dont exist or should be avoided)}
+%\subsection{Trade-offs Intro/in general}
+	%\subsubsection{Define tradeoffs as  inherently contradictory(trivial for conflict as opposed to view that tradeoffs dont exist or should be avoided)}
 
 
 	The notion of a tradeoff describes a decision between multiple (usually mutually contradictory) objectives, in the sense that a gain in one objective results in loss in one or more other objectives.
-	The concept of trade-offs is very common in everyday life, \dots (one short example, not too informal)
-
-	\dots
+	This concept is very common in everyday life, most decisions involve require a trade-off of some sort, usually \dots
 	
-	But in economics especially, trade-offs play a huge role and there have been multiple approaches to formalize them.
-	One such approach, that is so widespread and commonly used that it could be regarded as a convention, is Pareto Optimality.
+	\dots (one short example, not too informal)
 
-	\subsubsection{First derive mathematical formulation used in economics(pareto efficiency and multi objective optimization)}
+	But in economics in particular trade-offs are of special interest, they are a central point of study in the field.
+	Accordingly, economists have proposed multiple approaches to formalize them.
+	One such approach, that is so widespread and commonly used that it can be regarded as a convention, is Pareto efficiency and the Pareto front.
+
+	\subsection{Multi-objective optimization and Pareto efficiency}
 
 	To approach choosing an optimal feasible decision (allocation) for various types of trade-offs we will introduce multi-objective optimization.
 	A general multi-objective optimization problem can be written in the following way:
-	$$min(u_1), \quad s.t. x\in X$$
+	$$min(u_1), \quad s.t.\; x\in X$$
 	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function representing each dimension.
 	For a non-trivial multi-objective optimization problem it is not possible to minimize every single objective function at the same time.
 	Thus the notion of Pareto optimality is introduced:
@@ -22,7 +23,7 @@
 	$$1.\quad u_i(x)\le u_i(x'), \forall i\in {1,2,\dots,k}$$
 	$$2. \quad u_j(x) < u_j(x'), \forall j\in {1,2,\dots,k}$$
 
-	Such a decision is also called Pareto optimal/Pareto efficient.
+	Such a decision is also called Pareto optimal or Pareto efficient.
 	Any Pareto optimal decision cannot be further improved for one objective unilaterally without resulting in loss in one or more other objectives.
 	The set of all Pareto optimal decisions is called the Pareto front.
 	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way:
@@ -43,21 +44,22 @@
 	How to choose along pareto front (how to solve)
 
 	\begin{itemize}
-	\item a priori, incorporating priors like knowledge/preference/best practices/experience
+	\item a priori, incorporating priors like knowledge/preference/ 
+	best practices/experience
 	\item a posteriori
 	\item other MCDM approaches
 	\end{itemize}
 
 
-	\subsubsection{Tradeoffs in ML}
-	\begin{itemize}
-		\item Accuracy vs. Fairness (Cost of Fairness in binary classification) 
-		\item Group vs Individual Fairness
-		\item Accuracy vs. Privacy
-	\end{itemize}
+	\subsection{Tradeoffs in ML}
+	Next we are going to characterize three main fairness related tradeoffs in machine learning systems:
+	\paragraph{Accuracy vs. Fairness (Cost of Fairness in binary classification)}
+	The accuracy and fairness tradeoff is a 
+	\paragraph{Group vs Individual Fairness}
+	
+	\paragraph{Accuracy vs. Privacy}
 
-
-	\subsubsection{Talk about tradeoffs in medicine/ethics in general}
+	\subsection{Talk about tradeoffs in medicine/ethics in general}
 	As already hinted to earlier, tradeoffs play a central role in medicine.
 	They can appear in different areas in the field, be it at high level healthcare policy decisions or when considering treatment options for one specific patient.
 	Sometimes those tradeoffs arise when the decision involves a moral or ethical dilemma:
