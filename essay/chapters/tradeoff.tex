@@ -10,7 +10,7 @@
 
 	But in economics in particular trade-offs are of special interest, they are a central point of study in the field.
 	Accordingly, economists have proposed multiple approaches to formalize them.
-	One such approach, that is so widespread and commonly used that it can be regarded as a convention, is Pareto efficiency and the Pareto front.
+	One such approach, which is so widespread and commonly used that it can be regarded as a convention, is Pareto efficiency and the Pareto front.
 
 	\subsection{Multi-objective optimization and Pareto efficiency}
 
@@ -73,30 +73,23 @@
 	Here we are going to characterize three fairness related tradeoffs in machine learning systems:
 	
 	\paragraph{Accuracy vs. Fairness (Cost of Fairness in binary classification)}
-	Prediction accuracy is a very desirable property in machine learning systems, maximizing it is often the primary goal.
+	Prediction accuracy is a very desirable property in machine learning systems, maximizing it is often the primary goal of the employed algorithm.
 	Fair machine learning is concerned with identifying and mitigating bias and discrimination of sensitive attributes in ML systems.
 	Ideally we would like to achieve optimal accuracy while not discriminating with respect to any sensitive feature.
-	But as demonstrated in e.g. \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} empirically, avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
+	But as demonstrated empirically in e.g. \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
+
+	Furthermore, \cite{menon2018cost} showcases that this tradeoff is a property inherent in the data and doesn't depend on the algorithm used when learning on a modified problem subject to a fairness constraint.
+	Here the accuracy/fairness tradeoff depends on the "alignment" of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
+	Conversely, if the sensitive feature and the label are independent of each other, we can achieve perfect fairness while retaining the full accuracy.
 	
-	\dots
-
-
-	Furthermore, \cite{menon2018cost} showcases that this tradeoff is a property inherent in the data and doesn't depend on the algorithm used when 
-	
-	\dots thresholding and bayes optimal classifier in williamson paper
-
-	Here the tradeoff depends on the "alignment" of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated ensuring fairness results in huge losses in accuracy.
-	Conversely, if the sensitive feature and the label are independent of each other we can achieve perfect fairness while retaining the full accuracy.
-	
-	To guarantee a certain amount of fairness, subject to a certain fairness measure,  	
-
-	If we consider the Pareto front of the accuracy and fairness tradeoff (compare [] and []), we 
+	To guarantee a certain amount of fairness, subject to a certain fairness measure, while retaining the maximum accuracy possible under that fairness constraint we can consider the Pareto front of this tradeoff. 	
+	It  is characterized by \dots (compare [] and [])
 
 
 	\paragraph{Group vs Individual Fairness}
 	
 	\paragraph{Accuracy vs. Privacy}
-	Privacy, just like fairness, is another information based harm [cite lecture?], although they 
+	Privacy, just like fairness, is another information based harm [cite lecture?] that, unlike fairness, \dots
 
 	\dots
 
