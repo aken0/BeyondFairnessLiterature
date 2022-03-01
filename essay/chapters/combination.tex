@@ -38,7 +38,7 @@ The consensus is that fairness through unawareness is not the right solution, be
 
     The issue of reducing an individual to a group identity already exists in statistics, and arises in classical clinical practice as well.
     Despite claims about the possibility of `personalized medicine' thanks to ML methods, individuals are still reduced to their features \cite{Dijkstra2020}.
-    Although it is true that personalization might be an illusion, ML allows for more precise groupings
+    Although it is true that personalization might be an illusion, ML allows for more precise groupings.
 
     Similarly, the problem of data privacy pre-exists the entry of Machine Learning in the medical field \cite[p.~346]{Dijkstra2020}.
     Privilege bias (models being developed for diseases that disproportionately affect a certain group) \cite[p.~5]{Rajkomar2018} is a problem that exists in classical statistical studies as well \cite{Jackson2019}.
@@ -57,7 +57,7 @@ The consensus is that fairness through unawareness is not the right solution, be
     To summarize these advantages, we can say that ML, despite the typical complaints about its inscrutability, in a way helps enforce the transparency of the decisions taken, by requiring the ethical position to be written down explicitly \cite{Williamson2021}.
     This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely.
     Let us reiterate this point: in many cases, ML technologies would simply assist human decision-makers in existing tasks \cite[p.~2]{Morley2020}.
-    For this reason, the analysis of their impact must be relative to the current human decision-making, and not an absolute decision about whether they act `perfectly fairly' or not.
+    For this reason, the analysis of their impact must be relative to the current human decision-making (taking a utilitarian point of view, as is typical for stochastic problems; see \cite{Hardin1989}), and not an absolute decision about whether they act `perfectly fairly' or not.
     This is however rarely done, and is sometimes even impossible to do because of the impossibility and/or illegality of collecting statistics about human deciders \cite{Williamson2021}.
 
 
@@ -74,8 +74,10 @@ The consensus is that fairness through unawareness is not the right solution, be
     A possible solution is hence to develop system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
     ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}, potentially reducing the impact of dataset shift with the integration of new data.
     However, the dynamics of the entire ecosystem make it very difficult to predict its evolution.
+    Furthermore, since the problems that are dealt with are stochastic in nature, the developed solutions will necessarily be stochastic and entail some kind of trade-off, typical of technological innovations \cite{Hardin1989}.
+    Dealing with stochastic problems requires a weighting of benefits and risks by their probabilities \cite{Hardin1989}, and statistical reasoning is exactly what ML is good at (and humans are not) \cite{Williamson2021}.
     \idea{Data `set' notion, necessity to accept bias in data, data as a time-dependent snapshot, evolution, effects of interventions, dynamics, \dots.}
-    Furthermore, very little work has been done in ML to assess the evolution of the data distribution when decisions are taken by ML systems adjusted for fairness.
+    Unfortunately, very little work has been done in ML to assess the evolution of the data distribution when decisions are taken by ML systems adjusted for fairness.
     Economics literature in affirmative action may be helpful in analyzing the problem \cite{Chouldechova2020}.
 
     \idea{
