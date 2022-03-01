@@ -1,11 +1,14 @@
 \subsection{Fairness problems at the intersection of ML and medicine}
 \cite{Morley2020} order ethical questions about algorithmic unfairness in the group of normative concerns.
-The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020}.
+The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020}\cite{Chen2021}.
+The problem is often identified in the data used for training, which might contain label prejudice (a kind of negative legacy), variability amongst clinicians and institutions, and evolving clinical knowledge \cite{Chen2021}.
+However, the data at deployment time is also identified as a source of problems: population shift makes the developed model not adapted to the current population, and the usual lack of ground truth labels at test time makes evaluation difficult \cite{Chen2021}.
 \cite{Fletcher2021} identify ethical discussion in classification problems, when the operating point of the algorithm is chosen.
 This corresponds to the trade-off between false positives and false negatives, a well-known question in medicine (for example in breast cancer screening \cite{Fletcher2021}).
 They carefully make the distinction between bias, an ethically neutral term indicating statistical imbalances, and unfairness \cite[p.~6]{Fletcher2021}.
 Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}.
 Fairness in ML is usually defined in terms of groups, quantified by group fairness measures.
+The consensus is that fairness through unawareness is not the right solution, because of sensible attribute leakage and the true effects of latent biological factors in many diseases \cite{Chen2021}.
 
 
 
@@ -25,7 +28,7 @@ Fairness in ML is usually defined in terms of groups, quantified by group fairne
     Medical practitioners arguably learn the best treatments partly from experience.
     If the majority of their patients come from a particular group, it is very likely that they will ``overfit'' their knowledge to that group, or at least be able to predict their response to particular treatments better.
     Similarly, textbook knowledge is derived from observations from medical practitioners and/or statistical studies.
-    Biased data informing those studies will bias the observed results.
+    Biased data informing those studies will bias the observed results \cite{Chen2021}.
     This effect is exemplified by hearth health research, where research on biased data (higher proportion of men) lead to uneven improvements in heart attacks treatment with respect to gender \cite[e221]{Mccradden2020}.
     The data that informs that knowledge is probably very similar to the data used to train ML algorithms.
     The resulting inferences will hence be similarly biased as a consequence of data imbalances.
@@ -41,7 +44,7 @@ Fairness in ML is usually defined in terms of groups, quantified by group fairne
     Privilege bias (models being developed for diseases that disproportionately affect a certain group) \cite[p.~5]{Rajkomar2018} is a problem that exists in classical statistical studies as well \cite{Jackson2019}.
     In short, the trade-offs we analyzed (group fairness and individual fairness, privacy and predictability, fairness and predictability) exist independently of the system used to make decisions.
     That is, they are not inherent to the technology used to solve them, ML, but to the goals and requirements of the system.
-    ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite[p.~2]{Rajkomar2018}.
+    ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite[p.~2]{Rajkomar2018}\cite{Mccradden2020}.
 
 
 
@@ -65,11 +68,11 @@ Fairness in ML is usually defined in terms of groups, quantified by group fairne
     Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and hence probably imperfect.
     The empiricist's answer to this problem is to observe the effects of the decision and adapt his assumptions and knowledge based on them.
     The advantage of actively trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
-    If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get \idea{[citation needed: see lecture 12, slide 5]}\idea{Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.}.
+    If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get \idea{[citation needed: see lecture 12, slide 5]}\idea{Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.} and can be monitored at deployment time (failure auditing \cite{Chen2021}).
     That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences (instigating some kind of population-level behavioral change health \cite[p.~5]{Morley2020}).
-    For example, actively trying to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and what the best approach is to solve them.
+    For example, actively trying to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and potentially reduce performance gaps \cite{Chen2021}.
     A possible solution is hence to develop system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
-    ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}.
+    ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}, potentially reducing the impact of dataset shift with the integration of new data.
     However, the dynamics of the entire ecosystem make it very difficult to predict its evolution.
     \idea{Data `set' notion, necessity to accept bias in data, data as a time-dependent snapshot, evolution, effects of interventions, dynamics, \dots.}
     Furthermore, very little work has been done in ML to assess the evolution of the data distribution when decisions are taken by ML systems adjusted for fairness.
