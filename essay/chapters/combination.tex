@@ -1,4 +1,11 @@
 \subsection{Fairness problems at the intersection of ML and medicine}
+\cite{Morley2020} order ethical questions about algorithmic unfairness in the group of normative concerns.
+The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020}.
+\cite{Fletcher2021} identify ethical discussion in classification problems, when the operating point of the algorithm is chosen.
+This corresponds to the trade-off between false positives and false negatives, a well-known question in medicine (for example in breast cancer screening \cite{Fletcher2021}).
+They carefully make the distinction between bias, an ethically neutral term indicating statistical imbalances, and unfairness \cite[p.~6]{Fletcher2021}.
+Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}.
+Fairness in ML is usually defined in terms of groups, quantified by group fairness measures.
 
 
 
@@ -8,7 +15,7 @@
     In the previous sections, we concentrated on trade-offs related with fairness considerations.
     An interesting aspect of such trade-offs is their origin.
     We argue that many fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
-    This means that the analysis of fairness is necessarily domain-dependent, and in our case must draw on medical ethics literature.
+    This means that the analysis of fairness is necessarily domain-dependent \cite[p.~5]{Fletcher2021}, and in our case must draw on medical ethics literature \cite[p.~2]{Morley2020}.
     Hence, we suggest abstracting from Machine Learning itself and regard it as a general technology used to solve a pre-existing problem.
     The ethical considerations will hence be based on both medical ethics (to allow for domain-dependence) and philosophy of technology, recognizing the interaction between our behavior and the technology we use \cite{Dijkstra2020}.
     Our reason to, on a first analysis, disregard the specifics of Machine Learning is that in many cases, Machine Learning often simply specifies existing trade-offs and makes them unavoidable.
@@ -43,45 +50,33 @@
     Firstly, it imposes the need for precise definitions of what is meant by terms like ``discrimination'', ``equity'', and so on.
     Secondly, it forces the developers of the system to choose precise weights for the principles that they want to respect, and explicitly accept the existence of trade-offs that are inherent to the problem.
     Thirdly, it makes the goals and evaluation metrics (and their implied definition of what a ``good'' solution looks like) clear.
-    Knowing that those goals influence the results, with for example pure efficiency potentially leading to the propagation of health inequities \cite[p.~2]{Rajkomar2018}, the importance of each objective has to be decided upon (and hence, the chosen position on the Pareto frontier).
+    Knowing that those goals influence the results \cite{Dijkstra2020}, with for example pure efficiency potentially leading to the propagation of health inequities \cite[p.~2]{Rajkomar2018}, the importance of each objective has to be decided upon (and hence, the chosen position on the Pareto frontier).
     To summarize these advantages, we can say that ML, despite the typical complaints about its inscrutability, in a way helps enforce the transparency of the decisions taken, by requiring the ethical position to be written down explicitly \cite{Williamson2021}.
     This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely.
-    Let us reiterate this point: in many cases, ML technologies would simply assist or replace human decision-makers, so the analysis of their impact must be relative to the current human decision-making, and not an absolute decision about whether they act `perfectly fairly' or not.
-    
-    \idea{
-        \begin{itemize}
-            \item Positive versus negative harms: in doubt, do nothing.
-            \item This reasoning is much harder to apply to critical problems as those emerging in medicine.
-        \end{itemize}
-    }
-    \temp{
+    Let us reiterate this point: in many cases, ML technologies would simply assist human decision-makers in existing tasks \cite[p.~2]{Morley2020}.
+    For this reason, the analysis of their impact must be relative to the current human decision-making, and not an absolute decision about whether they act `perfectly fairly' or not.
+    This is however rarely done, and is sometimes even impossible to do because of the impossibility and/or illegality of collecting statistics about human deciders \cite{Williamson2021}.
+
+
     The visceral resistance to the use of any technological system that shows any behavior deemed as unjust might be stopping improvements in overall care, and can be considered problematic.
-    Do we want, for example, to refute to apply any system that does not lead to equalized outcomes \cite[p.~5]{Rajkomar2018} but only equalized benefit \cite[p.~5]{Rajkomar2018}?
+    Do we want, for example, to refute to apply any system that does not lead to equalized outcomes but only equalized benefit \cite[p.~5]{Rajkomar2018}?
     How do we justify keeping the unfair status quo by avoiding solutions that would improve care in general and stratified across sensitive groups, just because those solutions do not perfectly solve the problem?
 
-    Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and to the possibility of being `wrong'.
+    Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and hence probably imperfect.
     The empiricist's answer to this problem is to observe the effects of the decision and adapt his assumptions and knowledge based on them.
     The advantage of actively trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
-    If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get (see lecture 12, slide 5).
-    That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences.
+    If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get \idea{[citation needed: see lecture 12, slide 5]}\idea{Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.}.
+    That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences (instigating some kind of population-level behavioral change health \cite[p.~5]{Morley2020}).
     For example, actively trying to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and what the best approach is to solve them.
     A possible solution is hence to develop system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
     ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}.
     However, the dynamics of the entire ecosystem make it very difficult to predict its evolution.
+    \idea{Data `set' notion, necessity to accept bias in data, data as a time-dependent snapshot, evolution, effects of interventions, dynamics, \dots.}
     Furthermore, very little work has been done in ML to assess the evolution of the data distribution when decisions are taken by ML systems adjusted for fairness.
     Economics literature in affirmative action may be helpful in analyzing the problem \cite{Chouldechova2020}.
-    }
 
     \idea{
         Draw on ``How humans judge machines.''
-    }
-
-    \idea{
-        Data `set' notion, necessity to accept bias in data, data as a time-dependent snapshot, evolution, effects of interventions, dynamics, \dots.
-    }
-
-    \idea{
-        Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.
     }
 
 
@@ -91,8 +86,6 @@
     However, we can identify some issues that arise specifically from the combination of medicine and Machine Learning: that is, ethical issues that uniquely emerge from this technology \cite{Dijkstra2020}.
     In particular, the use of ML as assisting systems rather than replacements of clinicians altogether complicates the discussion about biases further.
     The end effect of the integration of ML tools in medical practice is a complex function of the interaction of their results and their usage by clinicians on patients \cite[p.~4]{Rajkomar2018}.
-    \idea{Julian's paragraph here}
-
 
 
 We have argued that there are no new fairness trade-offs at the intersection of machine learning and medicine but rather that the preexisting ones are preserved, increased or possibly decreased. However, the deployment of machine learning methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
