@@ -35,7 +35,11 @@
 	\begin{center}
 			
 	\begin{tikzpicture}
-    \begin{axis}[ticks=none,ylabel={Accuracy}, xlabel={Fairness}]
+    \begin{axis}[xmin = 0,
+  		xmax = 9,
+  		ymin = 0,
+  		ymax = 9,
+		ticks=none,ylabel={Accuracy}, xlabel={Fairness},axis lines = left,]
 		\addplot[domain=.5:8] {4/x};
     \end{axis}
 	\end{tikzpicture}
@@ -45,7 +49,11 @@
 
 	Note that Pareto optimality doesn't ensure anything beyond the property derived above.
 	In particular it doesn't provide any guarantees about a "fair" or normative allocation or decision.
+	
+	\dots
 
+	By applying the concept of Pareto optimality one could even say that any decision that doesn't involve a tradeoff of some sort would be trivial to make, because it would have a unique maximum.
+	Of course it would be desirable to avoid many of the tradeoffs in the sense of maximizing all objectives simultaneously, but that maximizing solution might not be in the feasible set, i.e. a possible decision at the given time.
 	\dots
 
 	But the concept of Pareto optimality alone won't result in a single optimal or "best" answer to our decision problem.
@@ -55,58 +63,67 @@
 
 	How to choose along pareto front (how to solve)\dots
 
+	\idea{
 	\begin{itemize}
 	\item a priori, incorporating priors like knowledge/preference/ 
 	best practices/experience
 	\item a posteriori
 	\item other MCDM approaches
 	\end{itemize}
+	}
 
 
-	\idea{Tuning via "knobs" (lecture 3) is also just travelling along pareto front}
-
+	\clearpage
 	\subsection{Tradeoffs in fair Machine Learning}
 	As with any technology [cite] there are many tradeoffs inherent in machine learning systems and algorithms.
 
 	\dots (maybe three axes of conflict arthur part)
 
-	Here we are going to characterize three fairness related tradeoffs in machine learning systems:
+	Here we are going to characterize four fairness related tradeoffs in machine learning systems:
 	
 	\paragraph{Accuracy vs. Fairness (Cost of Fairness in binary classification)}
 	Prediction accuracy is a very desirable property in machine learning systems, maximizing it is often the primary goal of the employed algorithm.
 	Fair machine learning is concerned with identifying and mitigating bias and discrimination of sensitive attributes in ML systems.
 	Ideally we would like to achieve optimal accuracy while not discriminating with respect to any sensitive feature.
-	But as demonstrated empirically in e.g. \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
+	But as demonstrated empirically in \eg \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
 
 	Furthermore, \cite{menon2018cost} showcases that this tradeoff is a property inherent in the data and doesn't depend on the algorithm used when learning on a modified problem subject to a fairness constraint.
-	Here the accuracy/fairness tradeoff depends on the "alignment" of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
-	Conversely, if the sensitive feature and the label are independent of each other, we can achieve perfect fairness while retaining the full accuracy.
-	
-	To guarantee a certain amount of fairness, subject to a certain fairness measure, while retaining the maximum accuracy possible under that fairness constraint we can consider the Pareto front of this tradeoff. 	
-	It  is characterized by \dots (compare [] and [])
+	Here it's shown that the accuracy and fairness tradeoff depends on the "alignment" of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
+	Conversely, if the sensitive feature and the label are fully independent of each other, we can achieve perfect fairness while retaining the full accuracy.
+
+	To guarantee a certain amount of fairness, subject to a certain fairness measure, while retaining the maximum accuracy possible under that fairness constraint we can examine the Pareto front of the tradeoff. 	
+	This is characterized by \cite{liu2020accuracy} and \cite{wei2020fairness}, where the trade-off between accuracy and fairness is given as a pareto front for different measures of fairness.
+	This allows for examination and comparison of the nature of the trade-off for different problems and measures.
+
+	\paragraph{Choice of fairness measure}
+	Often we will quantify fairness subject to a selected fairness measure.
+	Some often used examples include \dots
+
+	But the choice of measure entails a tradeoff already \cite{chouldechova2017fair}\cite{kleinberg2016inherent}, as some notions of fairness are mutually contradictory and cannot be satisfied together.
 
 
 	\paragraph{Group vs Individual Fairness}
+	The papers mentioned in the previous section all focus on group fairness.
+	They try to protect sensitive attributes, in the sense of treating different groups (separated by the sensitive attributes) equally.
+
+	Another fairness paradigm is individual fairness.
+	Here we consider equal treatment of individuals, independent of any group affiliation instead.
 	
 	\paragraph{Accuracy vs. Privacy}
-	Privacy, just like fairness, is another information based harm [cite lecture?] that, unlike fairness, \dots
+	Privacy, just like fairness, is another information-based harm \cite{van2008information}, albeit with slightly different characteristics.
+	For example in a medical application a patient would not object to his data being used for their own treatment, but might be opposed to be disadvantaged in another context (\eg the workplace) based on that same medical data \cite{van2008information}.
 
-	\dots
+	In the simple problem statement, to assure a certain degree of privacy we have to discard some data, which in turn will lead to worse accuracy.
+	There have been proposed some approaches to mitigate this loss, but they aren't always applicable.
+
 
 
 
 	\subsection{Talk about tradeoffs in medicine/ethics in general}
 	As already hinted to earlier, tradeoffs play a central role in medicine.
-	They can appear in different areas in the field, be it at high level healthcare policy decisions or when considering treatment options for one specific patient.
-	Sometimes those tradeoffs arise when the decision involves a moral or ethical dilemma:
-	If for example the administration of a treatment could harm the patient as a side effect one might still choose to treat the disease if it is the lesser evil (e.g. chemotherapy[cite]).
+	They can appear in different areas in the field, be it at high level healthcare policy decisions or when considering different possible treatment options for one specific patient.
+	Often those tradeoffs arise when the decision involves a moral or ethical dilemma:
+	If for example the administration of a treatment could harm the patient as a side effect one might still choose to treat the disease if it is the lesser evil (e.g. chemotherapy\cite{oronsky2016medical}).
 	In this case the the physician faces multiple tradeoffs:
 	He has to consider the effectiveness of the administered treatment (which is uncertain for the given patient) the likelihood and magnitude of possible adverse side-effect (which are also uncertain for the given patient).
-	He also has to consider \dots
 	
-	By applying the concept of Pareto optimality one could even say that any decision that doesn't involve a tradeoff of some sort would be trivial to make, because it would have a unique maximum.
-	Of course it would be desirable to avoid many of the tradeoffs in the sense of maximizing all objectives simultaneously, but that maximizing solution might not be in the feasible set, i.e. a possible decision at the given time.
-
-	\dots
-
-	elaborate on tradeoffs in medicine and whether the mathematical formulation can/should be employed (it maybe shouldn't be)
