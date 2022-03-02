@@ -1,33 +1,33 @@
-\subsection{Fairness problems at the intersection of ML and medicine}
-\cite{Morley2020} order ethical questions about algorithmic unfairness in the group of normative concerns.
-The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020}\cite{Chen2021}.
-The problem is often identified in the data used for training, which might contain label prejudice (a kind of negative legacy), variability amongst clinicians and institutions, and evolving clinical knowledge \cite{Chen2021}.
-However, the data at deployment time is also identified as a source of problems: population shift makes the developed model not adapted to the current population, and the usual lack of ground truth labels at test time makes evaluation difficult \cite{Chen2021}.
-\cite{Fletcher2021} identify ethical discussion in classification problems, when the operating point of the algorithm is chosen.
-This corresponds to the trade-off between false positives and false negatives, a well-known question in medicine (for example in breast cancer screening \cite{Fletcher2021}).
-They carefully make the distinction between bias, an ethically neutral term indicating statistical imbalances, and unfairness \cite[p.~6]{Fletcher2021}.
-Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}.
-Fairness in ML is usually defined in terms of groups, quantified by group fairness measures.
-The consensus is that fairness through unawareness is not the right solution, because of sensible attribute leakage and the true effects of latent biological factors in many diseases \cite{Chen2021}.
+\subsection{Fairness problems at the intersection of Machine Learning and medicine}
+    Ethical questions about algorithmic unfairness are a type of normative concerns \cite{Morley2020}.
+    The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020}\cite{Chen2021}.
+    The problem is often identified in the data used for training, which might contain label prejudice (a kind of negative legacy), variability amongst clinicians and institutions, and evolving clinical knowledge \cite{Chen2021}.
+    The data at deployment time is also identified as a source of problems: population shift makes the developed model not adapted to the current population, and the usual lack of ground truth labels at test time makes evaluation difficult \cite{Chen2021}.
+    Ethical discussion emerges in classification problems, when the operating point of the algorithm is chosen \cite{Fletcher2021}.
+    This corresponds to the trade-off between false positives and false negatives, a well-known question in medicine (for example in breast cancer screening \cite{Fletcher2021}).
+    While bias is an ethically neutral term indicating statistical imbalances, unfairness is the judgement of bias as incompatible with moral principles \cite[p.~6]{Fletcher2021}.
+    Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}.
+    Fairness in Machine Learning (ML) is usually defined in terms of groups, quantified by group fairness measures.
+    The consensus is that fairness through unawareness is not the right solution, because of sensible attribute leakage and the true effects of latent biological factors in many diseases \cite{Chen2021}.
 
 
 
 \subsection{Old and new problems}
-    As discussed in the previous sections, the practical problem of applying Machine Learning to health care tasks carries with it a certain number of unavoidable decisions about the relative importance of contrasting principles.
+    The practical problem of applying ML to health care decision tasks carries with it a certain number of unavoidable decisions about the relative importance of contrasting principles.
     In short, trade-offs have to be made.
     In the previous sections, we concentrated on trade-offs related with fairness considerations.
     An interesting aspect of such trade-offs is their origin.
     We argue that many fairness-related trade-offs originate from the decision (medical) problem itself, and not from the technology used to solve it.
     This means that the analysis of fairness is necessarily domain-dependent \cite[p.~5]{Fletcher2021}, and in our case must draw on medical ethics literature \cite[p.~2]{Morley2020}.
-    Hence, we suggest abstracting from Machine Learning itself and regard it as a general technology used to solve a pre-existing problem.
-    The ethical considerations will hence be based on both medical ethics (to allow for domain-dependence) and philosophy of technology, recognizing the interaction between our behavior and the technology we use \cite{Dijkstra2020}.
-    Our reason to, on a first analysis, disregard the specifics of Machine Learning is that in many cases, Machine Learning often simply specifies existing trade-offs and makes them unavoidable.
+    Hence, we suggest abstracting from ML itself and regard it as a general technology used to solve a pre-existing problem.
+    We thus take inspiration from philosophy of technology, recognizing the interaction between our behavior and the technology we use \cite{Dijkstra2020}.
+    Our reason to, on a first analysis, disregard the specifics of ML is that in many cases, ML often simply specifies existing trade-offs and makes them unavoidable.
 
-    As a concrete example, take the problem of unbalanced training data causing the Machine Learning algorithm to reach better performance on over-represented groups.
+    As a concrete example, take the problem of unbalanced training data causing the ML algorithm to reach better performance on over-represented groups.
     This problem is hidden, but still present, in unassisted medicine.
     Medical practitioners arguably learn the best treatments partly from experience.
     If the majority of their patients come from a particular group, it is very likely that they will ``overfit'' their knowledge to that group, or at least be able to predict their response to particular treatments better.
-    Similarly, textbook knowledge is derived from observations from medical practitioners and/or statistical studies.
+    Similarly, textbook knowledge is partly derived from observations from medical practitioners and/or statistical studies.
     Biased data informing those studies will bias the observed results \cite{Chen2021}.
     This effect is exemplified by hearth health research, where research on biased data (higher proportion of men) lead to uneven improvements in heart attacks treatment with respect to gender \cite[e221]{Mccradden2020}.
     The data that informs that knowledge is probably very similar to the data used to train ML algorithms.
@@ -40,46 +40,44 @@ The consensus is that fairness through unawareness is not the right solution, be
     Despite claims about the possibility of `personalized medicine' thanks to ML methods, individuals are still reduced to their features \cite{Dijkstra2020}.
     Although it is true that personalization might be an illusion, ML allows for more precise groupings.
 
-    Similarly, the problem of data privacy pre-exists the entry of Machine Learning in the medical field \cite[p.~346]{Dijkstra2020}.
+    Similarly, the problem of data privacy pre-exists the entry of ML in the medical field \cite[p.~346]{Dijkstra2020}.
     Privilege bias (models being developed for diseases that disproportionately affect a certain group) \cite[p.~5]{Rajkomar2018} is a problem that exists in classical statistical studies as well \cite{Jackson2019}.
     In short, the trade-offs we analyzed (group fairness and individual fairness, privacy and predictability, fairness and predictability) exist independently of the system used to make decisions.
-    That is, they are not inherent to the technology used to solve them, ML, but to the goals and requirements of the system.
+    They are not inherent to the technology used to solve them, ML, but to the goals and requirements of the system.
     ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite[p.~2]{Rajkomar2018}\cite{Mccradden2020}.
 
 
 
 \subsection{Potential benefits and the sin of perfection}
     How can ML actively help advance health equity and fairness?
-    Firstly, it imposes the need for precise definitions of what is meant by terms like ``discrimination'', ``equity'', and so on.
+    Firstly, it imposes the need for precise definitions of what is meant by terms like ``discrimination'' and ``equity''.
     Secondly, it forces the developers of the system to choose precise weights for the principles that they want to respect, and explicitly accept the existence of trade-offs that are inherent to the problem.
     Thirdly, it makes the goals and evaluation metrics (and their implied definition of what a ``good'' solution looks like) clear.
-    Knowing that those goals influence the results \cite{Dijkstra2020}, with for example pure efficiency potentially leading to the propagation of health inequities \cite[p.~2]{Rajkomar2018}, the importance of each objective has to be decided upon (and hence, the chosen position on the Pareto frontier).
+    Knowing that those goals influence the results \cite{Dijkstra2020} (for example, pure efficiency potentially leads to the propagation of health inequities \cite[p.~2]{Rajkomar2018}), the importance of each objective has to be decided upon (and with it, the position on the Pareto frontier).
     To summarize these advantages, we can say that ML, despite the typical complaints about its inscrutability, in a way helps enforce the transparency of the decisions taken, by requiring the ethical position to be written down explicitly \cite{Williamson2021}.
-    This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely.
-    Let us reiterate this point: in many cases, ML technologies would simply assist human decision-makers in existing tasks \cite[p.~2]{Morley2020}.
+    This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely \idea{[Citation needed]}.
+    Let us reiterate that, in many cases, ML technologies would simply assist human decision-makers in existing tasks \cite[p.~2]{Morley2020}.
     For this reason, the analysis of their impact must be relative to the current human decision-making (taking a utilitarian point of view, as is typical for stochastic problems; see \cite{Hardin1989}), and not an absolute decision about whether they act `perfectly fairly' or not.
     This is however rarely done, and is sometimes even impossible to do because of the impossibility and/or illegality of collecting statistics about human deciders \cite{Williamson2021}.
 
 
-    The visceral resistance to the use of any technological system that shows any behavior deemed as unjust might be stopping improvements in overall care, and can be considered problematic.
+    The visceral resistance to the use of any technological system that shows any behavior deemed as unjust might be stopping improvements in overall care, and can be considered problematic \cite{[Citation?]}.
     Do we want, for example, to refute to apply any system that does not lead to equalized outcomes but only equalized benefit \cite[p.~5]{Rajkomar2018}?
     How do we justify keeping the unfair status quo by avoiding solutions that would improve care in general and stratified across sensitive groups, just because those solutions do not perfectly solve the problem?
+    Especially considering the benefit potential of AI in medicine, exceptionalism for the application in this field is unjustified \cite[p.~9]{Fletcher2021}.
 
     Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and hence probably imperfect.
-    The empiricist's answer to this problem is to observe the effects of the decision and adapt his assumptions and knowledge based on them.
-    The advantage of actively trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
+    The advantage of actively, empirically trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
     If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get \idea{[citation needed: see lecture 12, slide 5]}\idea{Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.} and can be monitored at deployment time (failure auditing \cite{Chen2021}).
     That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences (instigating some kind of population-level behavioral change health \cite[p.~5]{Morley2020}).
-    For example, actively trying to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and potentially reduce performance gaps \cite{Chen2021}.
-    A possible solution is hence to develop system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
+    For example, pushing to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and potentially reduce performance gaps \cite{Chen2021}.
+    A possible solution is hence to develop the system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
     ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite[p.~7]{Rajkomar2018}, potentially reducing the impact of dataset shift with the integration of new data.
     However, the dynamics of the entire ecosystem make it very difficult to predict its evolution.
     Furthermore, since the problems that are dealt with are stochastic in nature, the developed solutions will necessarily be stochastic and entail some kind of trade-off, typical of technological innovations \cite{Hardin1989}.
     Dealing with stochastic problems requires a weighting of benefits and risks by their probabilities \cite{Hardin1989}, and statistical reasoning is exactly what ML is good at (and humans are not) \cite{Williamson2021}.
-    \idea{Data `set' notion, necessity to accept bias in data, data as a time-dependent snapshot, evolution, effects of interventions, dynamics, \dots.}
     Unfortunately, very little work has been done in ML to assess the evolution of the data distribution when decisions are taken by ML systems adjusted for fairness.
     Economics literature in affirmative action may be helpful in analyzing the problem \cite{Chouldechova2020}.
-
     \idea{
         Draw on ``How humans judge machines.''
     }
@@ -87,13 +85,13 @@ The consensus is that fairness through unawareness is not the right solution, be
 
 
 \subsection{New trade-offs}
-    Until now, we argued that most of the problems identified by the Fair-ML community pre-exist the application of Machine Learning to health.
-    However, we can identify some issues that arise specifically from the combination of medicine and Machine Learning: that is, ethical issues that uniquely emerge from this technology \cite{Dijkstra2020}.
+    Until now, we argued that most of the problems identified by the Fair-ML community pre-exist the application of ML to health.
+    However, we can identify some issues that arise specifically from the combination of medicine and ML: that is, ethical issues that uniquely emerge from this technology \cite{Dijkstra2020}.
     In particular, the use of ML as assisting systems rather than replacements of clinicians altogether complicates the discussion about biases further.
     The end effect of the integration of ML tools in medical practice is a complex function of the interaction of their results and their usage by clinicians on patients \cite[p.~4]{Rajkomar2018}.
 
 
-We have argued that there are no new fairness trade-offs at the intersection of machine learning and medicine but rather that the preexisting ones are preserved, increased or possibly decreased. However, the deployment of machine learning methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
+We have argued that there are no new fairness trade-offs at the intersection of ML and medicine but rather that the preexisting ones are preserved, increased or possibly decreased. However, the deployment of ML methods in the medical context does introduce new trade-offs into medicine apart from the fairness domain. So let us zoom out of this domain to see what is happening when ML and medicine are combined. 
 
 ML tools in medicine are often discussed as a human vs. machine situation - where the ML tool outperforms the human they should and in the near future will be substituted. However, making a binary decision out of this does not seem to be the optimal solution. Different studies found that combining AI and human evaluation can achieve better results than either of the two on their own \cite{rajpurkar2022ai, kiani2020impact, topol2019high, steiner2018impact}. One of those studies also found that especially for harder cases the assisted accuracy was very high compared to the unassisted accuracy when the ML model's prediction was correct, but that it was also painfully low in cases where the ML model's prediction was incorrect \cite{kiani2020impact}. So instead of a binary decision we are left with a new situation that fits our understanding of trade-offs. How are ML and human evaluation best combined to achieve the optimal accuracy? This might heavily depend on the task at hand. For example, for skin cancer classification where the input is only a cropped image of the potential carcinoma or melanoma, the algorithms decision alone might the enough. However, for identifying diseases in a breast X-ray, a much broader task than skin cancer classification, algorithmic and human judgement might need to be combined for the optimal solution.
  maybe more AI for less experienced, less AI for more experienced? This is a behavior that was already found for CDSS without ML components, where more experienced doctors were shown to ignore the assistance more often \cite{sutton2020overview}.
