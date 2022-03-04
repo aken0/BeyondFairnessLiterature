@@ -1,5 +1,7 @@
 Having identified a number of trade-offs entailed in the practice of medicine, in particular ethical ones, we now turn to problems that were identified by the fair-ML community when developing support systems.
 We first provide a short summary, and then argue that most of the emerging concerns are not fundamentally new, but related to older ethical problems intrinsic to (medical) decision problems.
+After arguing that the performance and fairness of CDSS should be analyzed not absolutely, but relatively to what human practitioners currently do,
+we evaluate what contributions and improvements (as it relates to fairness) ML could bring to medicine. 
 
 
 \subsection{Fairness problems at the intersection of Machine Learning and medicine}
@@ -35,7 +37,7 @@ We first provide a short summary, and then argue that most of the emerging conce
     If the majority of their patients come from a particular group, it is very likely that they will ``overfit'' their knowledge to that group, or at least be able to predict their response to particular treatments better.
     Similarly, textbook knowledge is partly derived from observations from medical practitioners and/or statistical studies.
     Biased data informing those studies will bias the observed results \cite{Chen2021}.
-    This effect is exemplified by hearth health research, where research on biased data (higher proportion of men) lead to uneven improvements in heart attacks treatment with respect to gender \cite[e221]{Mccradden2020}.
+    This effect is exemplified by hearth health research, where research on biased data (higher proportion of men) lead to uneven improvements in heart attacks treatment with respect to gender \cite{Mccradden2020}.
     The data that informs that knowledge is probably very similar to the data used to train ML algorithms.
     The resulting inferences will hence be similarly biased as a consequence of data imbalances.
     In this sense, ML systems even have a better potential to solve the problem, using for example importance weighting or under-/over-sampling \cite{Chen2021} or by driving the collection of more diversified data \cite{Zerilli2019}.
@@ -64,9 +66,9 @@ We first provide a short summary, and then argue that most of the emerging conce
 
 \subsection{Potential benefits and the sin of perfection}
     How can ML actively help advance health equity and fairness?
-    Firstly, it imposes the need for precise definitions of what is meant by terms like ``discrimination'' and ``equity''.
+    Firstly, it imposes the need for precise definitions of what is meant by terms like discrimination' and `equity'.
     Secondly, it forces the developers of the system to choose precise weights for the principles that they want to respect, and explicitly accept the existence of trade-offs that are inherent to the problem.
-    Thirdly, it makes the goals and evaluation metrics (and their implied definition of what a ``good'' solution looks like) clear.
+    Thirdly, it makes the goals and evaluation metrics (and their implied definition of what a `good' solution looks like) clear.
     Fourthly, ``it can significantly reduce one of two potential sources of bias and discrimination [\dots] \emph{intrinsic} bias'' \cite[p.~672]{Zerilli2019}, by removing the influence of (unknown) prejudice and emotions from decisions (although they might still be present in the training data).
     Knowing that those goals influence the results \cite{Dijkstra2020} (for example, pure efficiency potentially leads to the propagation of health inequities \cite{Rajkomar2018}), the importance of each objective has to be decided upon (and with it, the position on the Pareto frontier).
     To summarize these advantages, we can say that ML, despite the typical complaints about its inscrutability, in a way helps enforce the transparency of the decisions taken, by requiring the ethical position to be written down explicitly \cite{Williamson2021}.
