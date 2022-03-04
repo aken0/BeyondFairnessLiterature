@@ -71,6 +71,7 @@ Some scholars argue that while a mistake by a human practioner only affects a sm
 Another Trade-off can be seen between empathy in human practitioners and a more standardized way of tackling tasks in ML tools [^a1]. What do we understand as good health care, only the right diagnosis or psychological wellbeing during treatment, etc. as well?
 ethical question: should we predict death? ([^3] Table 3) [^5] talk about triage by ML
 
+
 Often, ML tools only work for specific tasks, i.e. detecting one or a couple of diseases in an X-ray. While the accuracy rate here is often high the broadness of the analysis is very limited compared to a doctor [^3]. This could be identified as a trade-off between high accuracy with a narrow focus on the one hand and lower accuracy with a broader focus on the other.
 
 
