@@ -40,7 +40,7 @@
     The issue of reducing an individual to a group identity already exists in statistics, and arises in classical clinical practice as well.
     For example, there is evidence for the strong moral resistance to the use of statistics (such as generalization-allowing base rates) in sensitive situations \cite{Tetlock2003}.
     Despite claims about the possibility of `personalized medicine' thanks to ML methods, individuals are still reduced to their features \cite{Dijkstra2020}.
-    Although it is true that personalization might be an illusion, ML allows for more precise groupings.
+    Although it is true that personalization might be an illusion, ML allows for more precise groupings \idea{[citation needed]}.
 
     Similarly, the problem of data privacy pre-exists the entry of ML in the medical field \cite[p.~346]{Dijkstra2020}.
     Privilege bias (models being developed for diseases that disproportionately affect a certain group) \cite[p.~5]{Rajkomar2018} is a problem that exists in classical statistical studies as well \cite{Jackson2019}.
@@ -60,16 +60,23 @@
     This is an important factor especially when comparing their use to current practice and human-centered decisions, where the practitioner's values are necessarily at least indirectly influencing their decisions, probably without being stated precisely \idea{[Citation needed]}.
     Let us reiterate that, in many cases, ML technologies would simply assist human decision-makers in existing tasks \cite[p.~2]{Morley2020}.
     For this reason, the analysis of their impact must be relative to the current human decision-making (taking a utilitarian point of view, as is typical for stochastic problems; see \cite{Hardin1989}), and not an absolute decision about whether they act `perfectly fairly' or not.
-    This is however rarely done, and is sometimes even impossible to do because of the impossibility and/or illegality of collecting statistics about human deciders \cite{Williamson2021}.
+    A partial reason for public distrust of algorithmic solutions might be a wrong image of doctors as invulnerable and perfect figures, partly protected by physicians in trying to keep a ``symbolic facade of professional competence'' (while privately recognizing the risks and errors of their practice) \cite{Waring2005}.
+    A comparison to current unaided (by ML) practice is however rarely done, and is sometimes even impossible to do because of the impossibility and/or illegality of collecting statistics about human deciders \cite{Williamson2021}.
 
     The visceral resistance to the use of any technological system that shows any behavior deemed as unjust might be stopping improvements in overall care, and can be considered problematic \cite{[Citation?]}.
     Do we want, for example, to refute to apply any system that does not lead to equalized outcomes but only equalized benefit \cite[p.~5]{Rajkomar2018}?
     How do we justify keeping the unfair status quo by avoiding solutions that would improve care in general and stratified across sensitive groups, just because those solutions do not perfectly solve the problem?
+    Despite some resistance of doctors to evaluation (at least partially driven by fears of blame) \cite{Waring2005}, quantification of errors and fairness are needed to compare different solutions.
+    Furthermore, the time efficiency and cost of the ML applications with respect to unaided clinicians must be taken into account.
+    As discussed before, trade-offs are made about budget allocation and doctors' time prioritization, so reducing them might allow improvements in other sectors of medical by displacing the saved resources (which is a phrasing that might be more positively received than simply mentioning saved costs \cite{Tetlock2003}).
     Especially considering the benefit potential of AI in medicine, exceptionalism for the application in this field is unjustified \cite[p.~9]{Fletcher2021}.
 
     Since our view of the world is partial and hence stochastic, we have to accept that any decision is subject to uncertainty and hence probably imperfect.
+    In particular, the inevitability of errors in the medical field (be them active or latent) is widely recognized by practitioners themselves \cite{Waring2005}.
     The advantage of actively, empirically trying a solution, despite the uncertainty about its results, is the positive feedback loop that it creates.
-    If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get \idea{[citation needed: see lecture 12, slide 5]}\idea{Examine the idea that ``clinicians bury their mistakes'' vs aviation, ... for why it may seem more problematic in the field. Culture of improvement.} and can be monitored at deployment time (failure auditing \cite{Chen2021}).
+    If we observe the development of ML systems under this lens, we can accept that solutions will evolve over time based on the results they get and can be monitored at deployment time (failure auditing \cite{Chen2021}).
+    This would be particularly welcome in medicine, which suffers from a lacking culture of error culture as compared to industries such as aviation and nuclear energy \cite{Waring2005}.
+    While the common suspect for this lack is the ``culture of blame'' found in medicine, other factors can be found, such as the fear of external blame, the attempt to maintain a figure of competence, the normalization of errors, a revulsion to management, an individualistic culture, a skepticism about external non-expert observers, and collegiality \cite{Waring2005}.
     That is, the fact that we change the way decisions are made will change the underlying data distribution and offer us more insights about the real sources of group differences (instigating some kind of population-level behavioral change health \cite[p.~5]{Morley2020}).
     For example, pushing to correct for historical bias by applying equal allocation principles \cite[p.~6]{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and potentially reduce performance gaps \cite{Chen2021}.
     A possible solution is hence to develop the system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
