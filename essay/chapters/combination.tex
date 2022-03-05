@@ -6,15 +6,15 @@ we evaluate what contributions and improvements (as it relates to fairness) ML c
 
 \subsection{Fairness problems at the intersection of Machine Learning and medicine}
     Ethical questions about algorithmic unfairness are a type of normative concerns \cite{Morley2020}.
-    The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020}\cite{Chen2021}.
+    The general concern is that CDSS trained on unbalanced or biased datasets might pick up the wrong patterns and exacerbate existing inequalities in health by overfitting on advantaged groups \cite{Morley2020, Chen2021}.
     The problem is often identified in the data used for training, which might contain label prejudice (a kind of negative legacy), variability amongst clinicians and institutions, and evolving clinical knowledge \cite{Chen2021}.
-    The data at deployment time is also identified as a source of problems: population shift makes the developed model not adapted to the current population, and the usual lack of ground truth labels at test time makes evaluation difficult \cite{Chen2021}.
+    The data at deployment time is also identified as a source of problems: Population shift makes the developed model not adapted to the current population, and the usual lack of ground truth labels at test time makes evaluation difficult \cite{Chen2021}.
     Ethical discussion emerges in classification problems, when the operating point of the algorithm is chosen \cite{Fletcher2021}.
     This corresponds to the trade-off between false positives and false negatives, a well-known question in medicine (for example in breast cancer screening \cite{Fletcher2021}).
     While bias is an ethically neutral term indicating statistical imbalances, unfairness is the judgement of bias as incompatible with moral principles \cite{Fletcher2021}.
     Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}, as well as negative legacy and labeling prejudice \cite{Chen2021}
     So it must be recognized that ``algorithmic development is never an entirely objective, value-free endeavour: it will be influenced by a host of social and institutional norms, practices and attitudes that could well build bias into design.'' \cite[p.~673]{Zerilli2019}.
-    Fairness in Machine Learning (ML) is usually defined in terms of groups, quantified by group fairness measures.
+    Fairness in ML is usually defined in terms of groups, quantified by group fairness measures.
     The consensus is that fairness through unawareness is not the right solution, because of sensible attribute leakage and the true effects of latent biological factors in many diseases \cite{Chen2021}.
 
 
@@ -50,7 +50,7 @@ we evaluate what contributions and improvements (as it relates to fairness) ML c
 
     The issue of reducing an individual to a group identity already exists in statistics, and arises in classical clinical practice as well.
     For example, there is evidence for the strong moral resistance to the use of statistics (such as generalization-allowing base rates) in sensitive situations \cite{Tetlock2003}.
-    Despite claims about the possibility of `personalized medicine' thanks to ML methods, individuals are still reduced to their features \cite{Dijkstra2020}\cite{Binns2018}.
+    Despite claims about the possibility of `personalized medicine' thanks to ML methods, individuals are still reduced to their features \cite{Dijkstra2020, Binns2018}.
     Although it is true that personalization might be an illusion, ML allows for more precise groupings.
     This might be enough to counter objections about generalization, since ``[w]hat appear to be criticisms of generalizations in general(!), may in fact boil down to criticisms of \emph{insufficiently precise} means of generalization.'' \cite[p.~5]{Binns2018}.
 
@@ -60,7 +60,7 @@ we evaluate what contributions and improvements (as it relates to fairness) ML c
     In particular, availability bias and anchoring effect have been observed in medical diagnosis, with increased effects for more expert doctors who rely more on non-analytical reasoning \cite{Mamede2010}.
     In short, the trade-offs we analyzed (group fairness and individual fairness, privacy and predictability, fairness and predictability) exist independently of the system used to make decisions.
     They are not inherent to the technology used to solve them, ML, but to the goals and requirements of the system.
-    ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite{Rajkomar2018}\cite{Mccradden2020}.
+    ML can be used to proactively advance health equity (beneficence), and not only avoiding harms (non-maleficence) \cite{Rajkomar2018, Mccradden2020}.
     This however requires deciding on a fairness measure to enforce (and how much to weigh it against performance), that will in most cases be in contrast with other fairness definitions \cite{Zerilli2019}.
 
 
@@ -104,7 +104,7 @@ we evaluate what contributions and improvements (as it relates to fairness) ML c
     For example, pushing to correct for historical bias by applying equal allocation principles \cite{Rajkomar2018} will give us more diverse data based on which to infer the causes of past differences, and potentially reduce performance gaps \cite{Chen2021}.
     A possible solution is hence to develop the system that we deem the more appropriate with the current knowledge, accept the imperfection and improve them over time as they get results.
     In a high-stakes context such as medicine, it is likely that stronger performance-based auditing (evaluating the outcomes) will be needed, and not only accreditation-based auditing (judged by experts) \cite{Zerilli2019}.
-    ML systems are not tools that once applied will remain forever the same: they should be closely monitored and improved over time \cite{Rajkomar2018}, potentially reducing the impact of dataset shift with the integration of new data.
+    ML systems are not tools that once applied will remain forever the same: They should be closely monitored and improved over time \cite{Rajkomar2018}, potentially reducing the impact of dataset shift with the integration of new data.
     The requested standards, however, ``\emph{should} be applied consistently across the board, regardless of whether we are dealing with machines or humans'' unless there is ``some compelling political, economic or social justification to the contrary'' \cite[p.~678]{Zerilli2019}.
     However, the dynamics of the entire ecosystem make it very difficult to predict its evolution.
     Furthermore, since the problems that are dealt with are stochastic in nature, the developed solutions will necessarily be stochastic and entail some kind of trade-off, typical of technological innovations \cite{Hardin1989}.
