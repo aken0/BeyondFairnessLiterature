@@ -17,6 +17,7 @@
 \newcommand{\wrt}{w.\@r.\@t.~}
 \newcommand{\idea}[1]{\color{blue}{#1}\color{black}}
 \newcommand{\temp}[1]{\color{green}{#1}\color{black}}
+\newcommand{\chapref}[1]{Chapter \ref{#1}}
 
 
 \title{Medical Machine Learning technologies as an example for necessary ethical trade-offs in ML}
@@ -30,6 +31,8 @@
 
 
 \begin{document}
+
+\pagenumbering{gobble}
 
 \maketitle
 
@@ -51,27 +54,37 @@
 \clearpage
 
 
+\pagenumbering{arabic}
 \section{Introduction}
+\label{introduction}
 \input{chapters/introduction}
 
 \section{Introduction to trade-offs}
+\label{tradeoff}
 \input{chapters/tradeoff.tex}
 
 \section{Trade-offs in medicine}
+\label{medicine}
 \input{chapters/medicine}
 
 \section{Combining machine learning and medicine}
+\label{combination}
 \input{chapters/combination}
 
 \section{New trade-offs}
+\label{new_tradeoff}
 \input{chapters/new_tradeoff.tex}
 
 \section{Conclusions}
+\label{conclusions}
 \input{chapters/conclusion}
 
 %\section{Arthur's ideas}
 %\input{chapters/arthur_ideas.tex}
 \clearpage
+
+
+\pagenumbering{gobble}
 
 
 \printbibliography
