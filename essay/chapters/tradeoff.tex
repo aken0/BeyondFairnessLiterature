@@ -57,15 +57,10 @@
 
 	\subsection{Trade-offs in fair Machine Learning}
 	When designing any technology \cite{alexander1964notes} there are many trade-offs inherent in the process.
-	Of course  systems and algorithms are no exception.
-
-	\idea{\dots (maybe three axes of conflict arthur part)
-	
-	\dots
-	
-	\cite{Chester2020}}
-
-	Here we are going to characterize three main fairness related trade-offs we identified in machine learning systems:
+	Of course ML systems and algorithms are no exception.
+	For example in medical ML systems we aim to both guarantee privacy as well as fair treatment, while our primary goal is still to achieve high accuracy and avoid misclassifications or mistreatment \cite{Chester2020}.
+	This leads to multiple trade-offs that have to be made.
+	Moving forward we are going to characterize three main fairness related trade-offs we identified in machine learning systems:
 	
 	\paragraph{Choice of fairness measure}
 	Often we will quantify fairness subject to a selected fairness measure.
@@ -107,8 +102,9 @@
 	Privacy, just like fairness, is another information-based harm, albeit with slightly different characteristics \cite{van2008information}.
 
 	In the simplest approach to the problem, to assure a certain degree of privacy we have to discard or randomize some of the data, which in turn will lead to worse accuracy.
-	There have also been proposed multiple more refined approaches to mitigate this loss of accuracy (many approaches for privacy preserving data mining and ML \eg \cite{duchi2014privacy} using differential privacy).
+	There have also been proposed multiple more refined approaches to mitigate this loss of accuracy (many approaches for privacy preserving data mining and ML \eg \cite{duchi2014privacy}, which uses differential privacy).
 
 	But while those are able to preserve accuracy to some degree under certain privacy guarantees, they aren't always applicable and don't necessarily resolve all of the harms mentioned.
 	This can be partially explained by the different meanings of \enquote{privacy} in different fields.
-	Differential privacy also might additionally amplify the unfairness of a given model \cite{bagdasaryan2019differential}, which is especially problematic when we try to balance all three axes of conflict (accuracy, privacy and fairness) in our ML system \cite{Chester2020}.
+	Differential privacy also might additionally amplify the unfairness of a given model \cite{bagdasaryan2019differential}, or in some cases even be incompatible with fairness in general \cite{cummings2019compatibility}. 
+	This is a problem, as it is often desirable to achieve high accuracy while preserving both privacy and fairness, \eg when we try to balance all three axes of conflict (accuracy, privacy and fairness) in our ML system \cite{Chester2020}.
