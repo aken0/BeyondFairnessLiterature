@@ -12,7 +12,7 @@ we evaluate what contributions and improvements (as it relates to fairness) ML c
     Ethical discussion emerges in classification problems, when the operating point of the algorithm is chosen \cite{Fletcher2021}.
     This corresponds to the trade-off between false positives and false negatives, a well-known question in medicine (for example in breast cancer screening \cite{Fletcher2021}).
     While bias is an ethically neutral term indicating statistical imbalances, unfairness is the judgement of bias as incompatible with moral principles \cite{Fletcher2021}.
-    Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}.
+    Examples of biases of interest are sampling bias, unforeseen correlations, true systemic bias with biological causes, and batch effects \cite{Fletcher2021}, as well as negative legacy and labeling prejudice \cite{Chen2021}
     So it must be recognized that ``algorithmic development is never an entirely objective, value-free endeavour: it will be influenced by a host of social and institutional norms, practices and attitudes that could well build bias into design.'' \cite[p.~673]{Zerilli2019}.
     Fairness in Machine Learning (ML) is usually defined in terms of groups, quantified by group fairness measures.
     The consensus is that fairness through unawareness is not the right solution, because of sensible attribute leakage and the true effects of latent biological factors in many diseases \cite{Chen2021}.
@@ -83,6 +83,8 @@ we evaluate what contributions and improvements (as it relates to fairness) ML c
     In the case of explainability, an often-requested characteristic for ML systems in health, double standards can be shown between what is expected from ML and what practitioners currently do \cite{Zerilli2019}.
     One can for example point out that ``the human brain, too, is largely a black box'' \cite[p.~666]{Zerilli2019}, and that explanations for decisions are often provided ex post, are influenced by emotions, and reflect mistaken rationalizations \cite{Zerilli2019}.
     A comparison to current unaided (by ML) practice is however rarely done, and is sometimes even impossible to do because of the impossibility and/or illegality of collecting statistics about human deciders \cite{Williamson2021}.
+    Furthermore, it might be particularly hard to do fair comparisons in the public discussions, since generally ``humans are judged by their intentions, while machines are judged by their outcomes'' \cite[p.~139]{Hidalgo2021}.
+    So, as long as fairness problems shown in human clinical decision-making are seen as unintentional, it might be difficult to argue for an effective advantage of using algorithmic decision-making tools.
 
     The visceral resistance to the use of any technological system that shows any behavior deemed as unjust might be stopping improvements in overall care, which can be considered problematic.
     Do we want, for example, to refute to apply any system that does not lead to equalized outcomes but only equalized benefit \cite{Rajkomar2018}?
