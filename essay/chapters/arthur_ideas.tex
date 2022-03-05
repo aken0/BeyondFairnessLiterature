@@ -24,21 +24,14 @@
         For example, assuming historical bias means putting into question the validity of the training labels, and hence accuracy on them as a performance measure \cite[p.~6]{Rajkomar2018}.
     }
     \idea{
-        \begin{itemize}
-            \item Why we think Binns 2020 does not cancel the problem.
-                    cp. ``Given the epistemic uncertainty surrounding the association between protected identities and health outcomes, the use of fairness solutions can create empirical challenges'' \cite[e221]{Mccradden2020}.
-                    negative legacy, labeling prejudice, sample selection bias \cite[p.~6]{Chen2021}.
-            \item Specificity of medicine: groups sometimes DO matter in the prediction. ``difference does not always entail inequality. In some instances, it is appropriate to incorporate differences between identities because there is a reasonable presumption of causation'' \cite[e221]{Mccradden2020}
-                    Importance of the ``causal structure between latent biological factors such as ancestry and their associated diseases across ethnic subpopulations'' \cite[p.~3]{Chen2021}.
-            \item ML systems have the (demonstrated in practice) potential to discriminate, even if group information is not included, through for example leakage of ethnicity, which is then used as a shortcut to make the predictions (reproducing, or even amplifying, historical bias) \cite[p.~3]{Chen2021}.
-                    For this reason, so-called fairness through unawareness is insufficient in non-discrimination. \cite[p.~5]{Chen2021}.
-        \end{itemize}
+        \item Why we think Binns 2020 does not cancel the problem.
+                cp. ``Given the epistemic uncertainty surrounding the association between protected identities and health outcomes, the use of fairness solutions can create empirical challenges'' \cite[e221]{Mccradden2020}.
+                negative legacy, labeling prejudice, sample selection bias \cite[p.~6]{Chen2021}.
     }
     Thirdly, transforming the objective from a single objective of performance to a multiple objective of performance and fairness leads to in general worst performance.
     We thus arrive at a trade-off between prediction accuracy (or whatever performance measure is used: sensitivity, specificity) and fairness.
     \idea{
         \begin{itemize}
-            \item Specificity of medicine: allocation of physical benefits and harms. Non-maleficience?
             \item ``difference between an idealised model and non-ideal, real-world behavior affects metrics of model performance (\eg, specificity, sensitivity) and clinical utility in practice.'' \cite[e221]{Dijkstra2020}.
         \end{itemize}
     }

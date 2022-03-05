@@ -47,15 +47,15 @@
 	\end{figure}
 
 	Note that Pareto optimality doesn't ensure anything beyond the property derived above.
-	In particular it doesn't provide any guarantees about a "fair" or normative allocation or decision \cite{van2007ethics}.
+	In particular it doesn't provide any guarantees about a fair or normative allocation or decision \cite{van2007ethics}.
 	
 	By applying the concept of Pareto optimality one could say that any decision that doesn't involve a trade-off of some sort would be trivial to resolve, because it would have a unique, unconstrained maximum.
 	Of course it would be desirable to avoid many of trade-offs in the sense of maximizing all objectives simultaneously, but that maximizing solution might not be in the feasible set.
 
-	\dots
+	\idea{\dots}
 
-	But the concept of Pareto optimality alone won't result in a single optimal or "best" answer to our decision problem.
-	Rather, the approach eliminates all "strictly worse" possible decisions in the feasible set and the decision maker is faced with a new problem.
+	But the concept of Pareto optimality alone won't result in a single optimal or \enquote{best} answer to our decision problem.
+	Rather, the approach eliminates all \enquote{strictly worse} possible decisions in the feasible set and the decision maker is faced with a new problem.
 	She now has to choose one solution (decision) from the Pareto front.
 	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (knowledge/preference).
 
@@ -65,40 +65,44 @@
 	\begin{itemize}
 	\item a priori, incorporating priors like knowledge/preference/ 
 	best practices/experience
-	\item a posteriori
 	\item other MCDM approaches
 	\end{itemize}
+
+	Also write sentence about algorithms to calculate front in high dimensions
 	}
 
 	\subsection{Trade-offs in fair Machine Learning}
 	When designing any technology \cite{alexander1964notes} there are many trade-offs inherent in the process.
-	
 	Of course machine learning systems and algorithms are no exception.
 
-	\idea{\dots (maybe three axes of conflict arthur part)}
-
-	Here we are going to characterize three fairness related trade-offs in machine learning systems:
+	\idea{\dots (maybe three axes of conflict arthur part)
 	
+	\dots
+	
+	\cite{Chester2020}}
+
+	Here we are going to characterize three main fairness related trade-offs we identified in machine learning systems:
 	
 	\paragraph{Choice of fairness measure}
 	Often we will quantify fairness subject to a selected fairness measure.
 	Some often used examples include equalized odds, statistical parity and predictive parity \cite{garg2020fairness}.
-    The elements to take into account when deciding on what metric of fairness to use are multiple.
+    The factors to take into account when deciding on what metric of fairness to use for a specific ML system are multiple.
 	The different metrics each formalize different notions of morality \cite{binns2020apparent}.
-    On the one hand, we need to decide what moral principles we want to follow, \ie what we intend by equal or just treatment.
+    First we need to decide what moral principles we want to follow, \ie what we intend by equal or just treatment.
 	But the choice of measure entails a trade-off already \cite{chouldechova2017fair} \cite{kleinberg2016inherent} \cite{berk2021fairness}, as some notions of fairness are mutually contradictory and cannot be satisfied at the same time.
 	In turn we have to choose between several contradictory measures, given that they are feasible for the ML problem at hand.
+	All the metrics mentioned above are group fairness measures.
+	In group fairness we try to protect so-called sensitive attributes, in the sense of treating different groups (that are separated by the sensitive attributes) equally.
+	But how do we choose the sensitive features or groups we want to protect?
+	We cannot take the sensitive features for granted, instead the separation into groups is also always a choice that humans have to make.
 
-	\idea{
-	One bigger issue we face when choosing a fairness measure is whether to consider individual or group fairness.
-	The papers mentioned in the previous section all focus on group fairness.
-	In group fairness measures we try to protect so-called sensitive attributes, in the sense of treating different groups (that are separated by the sensitive attributes) equally.
-	But the separation into groups is also always a choice that humans make and should not be taken for granted.
-    This leads to a conflict between individual fairness, with individuals wishing to be judged independently of their group identity, and group fairness, which tries to correct for supposed historical and data biases.
+	One apparent solution to the problem of choosing a group fairness measure could be to instead consider so called individual fairness.
+	Here we consider equal treatment of similar individuals, independent of any group affiliation.
+	By only considering individuals instead of groups we seemingly sidestep the problem of choosing the sensitive features we want to protect and which fairness measure to use.
+	Choosing an appropriate measure for the similarity of individuals poses difficulties, as there are many feasible measures and we cannot restrict the space of metrics by imposing additional (moral) constraints on the choice of measure.
+	But certain similarity measures do correspond to certain moral notions of equal treatment, \eg statistical parity \cite{dwork2012fairness}.
 
-	Another fairness paradigm is individual fairness.
-	Here we consider equal treatment of individuals, independent of any group affiliation instead.
-	}
+    This leads to a conflict between individual fairness, with individuals wishing to be judged independently of their group identity, and group fairness, which tries to correct for discrimination based on sensitive features.
 
 	\paragraph{Accuracy vs. Fairness (Cost of Fairness in binary classification)}
 	Prediction accuracy is a very desirable property in machine learning systems, maximizing it is often the primary goal of the employed algorithm.
@@ -107,21 +111,28 @@
 	But as demonstrated empirically in \eg \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
 
 	Furthermore, \cite{menon2018cost} showcases that this trade-off is a property inherent in the data and doesn't depend on the algorithm used when learning on a modified problem subject to a fairness constraint.
-	They show that the accuracy and fairness trade-off depends on the "alignment" of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
+	They show that the accuracy and fairness trade-off depends on the \enquote{alignment} of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
 	Conversely, if the sensitive feature and the label are fully independent of each other, we can achieve perfect fairness while retaining the full accuracy.
 
 	To guarantee a certain amount of fairness, subject to a certain fairness measure, while retaining the maximum accuracy possible under that fairness constraint we can examine the Pareto front of the trade-off. 	
 	This is characterized by \cite{liu2020accuracy} and \cite{wei2020fairness}, where the trade-off between accuracy and fairness is given as a Pareto front for different measures of fairness.
 	This allows for examination and comparison of the nature of the trade-off for different problems and measures.
+	
 
 	\paragraph{Accuracy vs. Privacy}
 	Privacy, just like fairness, is another information-based harm \cite{van2008information}, albeit with slightly different characteristics.
 
-	\dots
+	Van den Hoven \cite{van2008information} characterizes four main moral reasons to protect privacy and personal data:
 
-	For example in a medical application a patient would not object to his data being used for their own treatment, but might be opposed to be disadvantaged in another context (\eg the workplace) based on that same medical data \cite{van2008information}.
+	\idea{elaborate this\dots
 
-	\dots
+	For example in a medical application a patient would not object to his data being used for their own treatment, but might be opposed to be disadvantaged in another context (\eg the workplace) based on that same medical data.
 
-	In the simple problem statement, to assure a certain degree of privacy we have to discard some data, which in turn will lead to worse accuracy.
-	There have been proposed some approaches to mitigate this loss, but they aren't always applicable.
+	\dots}
+
+	In the simplest approach to the problem, to assure a certain degree of privacy we have to discard/randomize some of the data, which in turn will lead to worse accuracy.
+	There have also been proposed multiple more refined approaches to mitigate this loss of accuracy (many approaches for privacy preserving data mining/machine learning \eg \cite{duchi2014privacy} using differential privacy).
+
+	But while those are able to preserve accuracy to some degree under certain privacy guarantees, they aren't always applicable and don't necessarily resolve all of the harms mentioned.
+	This can be partially explained by the different meanings of \enquote{privacy} in different fields.
+	Differential privacy also might additionally amplify the unfairness of a given model \cite{bagdasaryan2019differential}, which is especially problematic when we try to balance all three axes of conflict (accuracy, privacy and fairness) in our ML system \cite{Chester2020}.
