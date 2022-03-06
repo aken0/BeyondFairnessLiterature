@@ -6,46 +6,52 @@ In this chapter, we concentrate on trade-offs found before the application of Ma
     % Limited resources
     % Cost vs health care quality trade-off
     % Can the individual decide it? (Private vs public insurance).
-    As already hinted to earlier, trade-offs play a central role in medicine.
-	They can appear in different areas in the field, be it at high level healthcare policy decisions or when considering different possible treatment options for one specific patient.
-    Mentioning trade-offs in the field of medicine or ethics might cause defensive reactions because of the mathematical flavor they carry, which clashes with the supposed complexity of ethical problems \cite{Williamson2021}.
-    Furthermore, the simple concept of trade-offs in cases where sacred values (such as human lives) clash with secular values (such as money) is often morally disturbing and avoided \cite{Tetlock2003}.
+    As hinted to earlier, trade-offs play a central role in medicine.
+	They can appear at different level in the field, be it at high level healthcare policy decisions or when considering different possible treatment options for one specific patient.
+    Mentioning trade-offs in the field of medicine or ethics might cause defensive reactions because of the mathematical flavor the notion carries, which clashes with the supposed complexity of ethical problems \cite{Williamson2021}.
+    Furthermore, the simple concept of trade-offs in cases where sacred values (such as human lives) clash with secular values (such as money) is typically morally disturbing to the public \cite{Tetlock2003}.
     Suggesting that doctors apply trade-offs in their practice is a contestable affirmation, since the nature of their ethical deliberations is necessarily partly non-mathematical \cite{Zerilli2019}.
     Hence, a more accepted term here is ethical (or moral) dilemma, which is a problem that arises when opposing values or principles co-occur \cite{Dijkstra2020}.
-    Fundamentally, however, trade-offs and practical solutions to moral dilemmas are the same thing: A decision on how much to weight principles that can not be fully respected at the same time.
-    If for example the administration of a treatment could harm the patient as a side effect one might still choose to treat the disease if it is the lesser evil (e.g. chemotherapy\cite{oronsky2016medical}).
+    Fundamentally, however, trade-offs and practical solutions to moral dilemmas are the same thing: A decision on how much to weigh principles that can not be fully respected at the same time.
+    If for example the administration of a treatment could harm the patient as a side effect, one might still choose to treat the disease if it is the lesser evil (as is the case with chemotherapy \cite{oronsky2016medical}).
     In this case the physician faces multiple trade-offs:
-	He has to consider the effectiveness of the administered treatment (which is uncertain for the given patient) the likelihood and magnitude of possible adverse side effect (which are also uncertain for the given patient).
+	He has to consider the effectiveness of the administered treatment (which is uncertain for the given patient), the likelihoods, and the magnitude of possible adverse side effects (which are also uncertain for the given patient).
     Far from purely qualitative reasoning, a step in the quantitative dimension of trade-offs is shown for example by evidence-based medicine \cite{Launer2020}, which serves to inform decisions on what risks are to be taken with the promise of some potential benefit.
 
     The perhaps most obvious trade-off in the practice of medicine, that every doctor understands, is the one between the potential gains and the risked losses \cite{Launer2020}.
-    In fact, one can go as far as to ``conceptualize medicine itself as the art of managing trade-offs'' \cite{Launer2020}.
+    In fact, one can go as far as to ``conceptualize medicine itself as the art of managing trade-offs'' \cite[p.~575]{Launer2020}.
     From the doctor's allocation of time to specific patients, to the risk of switching to a new potentially better treatment, to the decision of how aggressively to treat terminal patients, every hard decision a medical practitioner has to take entails a trade-off.
 
     Health care itself, as part of governance, is ridden with trade-offs.
-    Health care systems are administrated according to risk-benefit analyses, both as part of the overall governance budget and within the system (which operations to prioritize, what costs to cover, and others) \cite{Dionne2018}.
+    Health care systems are administrated according to risk-benefit analyses, both as part of the overall governance budget and within the system (which operations to prioritize and what costs to cover among other questions) \cite{Dionne2018}.
     Empirical research suggests that the phrasing of such decisions has a big impact in the public's perception of the problem:
     ``Hospital administrators wrestling with tragic trade-offs can find themselves in the dock as soon as critics wonder who set the budget constraint that made it possible to save only one child'' \cite[p.~323]{Tetlock2003}.
-    This might explain the resistance to trade-offs talks in health and preference for moral dilemmas talk mentioned above, despite the arguably higher practical utility of trade-off concepts.
+    This might explain the resistance to trade-offs talks in health and preference for moral dilemma formulations mentioned above, despite the arguably higher practical utility of the concept of trade-off.
 
     Furthermore, much attention is paid to preserving privacy when using medical records and clinical data for scientific studies.
     The European GDPR is for example an important personal data protection law, that because of unclarity and unresolved legal issues often stalls scientific research and progress as a result \cite{Eiss2020}.
+    A balance between the protection of the personal sensitive data of patients and potential scientific advancements must thus be found, leading to a necessary trade-off.
 
-    A more hidden trade-off, masked by claims of complete objectivity of science, is the one between methodological criteria in clinical research.
-    With the modern focus on evidence-based medicine and randomized controlled trials and consequent diminution in value of cohort studies, case-control studies, expert opinion, and case studies, active (interventional) studies have been elevated to the golden standard of medical research.
+    A more hidden trade-off, masked by naive claims of the complete objectivity of science, is the one between methodological criteria in clinical research.
+    With the modern focus on evidence-based medicine and randomized controlled trials as research instruments, and the consequent diminution in value of cohort studies, case-control studies, expert opinion, and case studies, active (interventional) studies have been elevated to the golden standard of medical research.
     However, in doing so, the whole focus is placed on the methodological criteria of generality and precision, disregarding criteria such as realism, coherence, explanatory power, and others.
     This hides the underlying trade-off between methodological criteria, giving an absolute choice where case-by-case considerations of medical focus and contextual values are required to set priorities \cite{Ho2011}.
+
+    As mentioned before, ML often has to deal with trade-offs between fairness and performance.
+    Let us in the following examine what fairness problems can arise in medical practice.
 
 \subsection{Fairness in traditional medicine}
     We can identify some key fairness issues in the medical literature.
     Healthcare disparities are a well-accepted reality, and ``often encompass all 5 domains of the social determinants of health as defined by the US Department of Health and Human Services (economic stability, education access and quality, healthcare access and quality, neighborhood and built environment, and social and community context)'' \cite[p.~2]{Chen2021}.
-    Furthermore, gender bias is a recognized factor in health care.
-    It is observed for example in the uneven composition of clinical trials samples, concentration on male-typical risk factors in studies, and in the different seriousness with which men's and women's complaints are received by medical doctors \cite{Ruiz1997}.
+    For example, gender bias is a recognized factor in health care.
+    It is observed \eg in the uneven composition of clinical trials samples, concentration on male-typical risk factors in studies, and in the different seriousness with which men's and women's complaints are received by medical doctors \cite{Ruiz1997}.
+    This bias might pose fairness problems, since the resulting health care system might overperform on men and underperform on women.
 
 \subsection{Solutions from medical ethics}
-    A good starting point for ethical discussions in medicine are the well-established guiding principles in biomedical ethics proposed by Beauchamp and Childress: Respect for autonomy, beneficence, non-maleficence and justice \cite{Dijkstra2020}, \cite{Morley2020}, \cite{Rajkomar2018}.
+    A good starting point for ethical discussions in medicine are the well-established guiding principles in biomedical ethics proposed by Beauchamp and Childress: Respect for autonomy, beneficence, non-maleficence and justice \cite{Dijkstra2020, Morley2020, Rajkomar2018}.
     The guiding ideas of biomedical ethics can be used to assess specific applications of ML to health, for example decision support in occupational health, by considering the potential benefits and risks with respect to those principles \cite{Dijkstra2020}.
 
     Despite the interest of considering biomedical ethics, actual practice seems to indicate that case-by-case evaluations of the moral implications of medical decisions are more useful than principled approaches.
-    Toulmin\cite{Toulmin1982} reports for example how a commission of people from different backgrounds, faced with specific practical problems, were able to reach some consensus (disagreeing at most about the degree of the decisions), all while furiously disagreeing about the principles supporting their decisions.
-    Physicians typically exert their clinical judgment only after collecting a precise case history, instead of following general theoretical considerations early on \cite{Toulmin1982}.
+    Toulmin\cite{Toulmin1982} reports for example how a commission of people from different backgrounds, faced with specific practical problems, were able to reach some consensus (disagreeing at most about the degree of the decisions), all while furiously disagreeing about the principles supporting their decisions \cite{Toulmin1982}.
+    It must furthermore be noted that physicians typically exert their clinical judgment only after collecting a precise case history, instead of following general theoretical considerations early on \cite{Toulmin1982}.
+    So if we take their behavior as somewhat exemplary, case-by-case evaluations considering the specific details might be required.
