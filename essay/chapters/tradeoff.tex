@@ -1,32 +1,32 @@
 	The notion of a trade-off describes a decision between multiple (usually mutually contradictory) objectives, in the sense that a gain in one objective results in loss in one or more other objectives.
-	On a broad view, trade-offs are the basic problem of human governance (``the central rationale for many policies'' \cite[p.~77]{Hardin1989}).
+	On a broad view, trade-offs are the basic problem of human governance (``the central rationale for many policies'' \cite[p.~77]{Hardin1989}):
     How many resources we allocate for one problem, leaving less for another one.
-	Trade-offs are intuitively understood from a young age as they are very common in everyday life, and encompass all human decision-making.
-	Biology, evolutionary theory, and more precisely the human body can be understood in terms of trade-offs \cite{Launer2020}.
+	Trade-offs are intuitively understood from a young age, as they are very common in everyday life, and encompass all human decision-making.
+	Biology, evolutionary theory, and the human body can all be understood in terms of trade-offs \cite{Launer2020}.
 	Similarly, policies dealing with large-scale stochastic problems (vaccination, traffic security, nuclear deterrence, criminal justice) always entail harms and benefits \cite{Hardin1989}, and hence trade-offs.
 
-	But in economics in particular trade-offs are of special interest, they are a central point of study in the field.
+	But in economics in particular trade-offs are of special interest, making them a central focus of study in the field.
 	Accordingly, economists have proposed multiple approaches to formalize them.
 	One such approach, which is so widespread and commonly used that it can be regarded as a convention, is Pareto efficiency and the Pareto front.
 
 	\subsection{Multi-objective optimization and Pareto optimality}
 
-	To approach choosing an optimal feasible decision (allocation) for various types of trade-offs we will introduce multi-objective optimization.
+	To approach the choice of an optimal feasible decision (allocation) for various types of trade-offs we introduce multi-objective optimization.
 	A general multi-objective optimization problem $F$ can be written as a maximization in the following way:
 	$$max \; F(x)=(u_1(x),\dots,u_k(x)), \quad s.t.\; x\in X$$
-	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function representing the $k$ dimensions.
+	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ are the utility/objective functions, adding up to $k$ dimensions.
 	For a non-trivial multi-objective optimization problem it is not possible to maximize every single objective function at the same time.
 	Thus the notion of Pareto optimality is introduced:
 	A decision $x\in X$ is said to Pareto dominate another solution $x'\in X$ if the following both hold:
 	$$1.\quad \forall\; i\in {1,2,\dots,k}: u_i(x)\ge u_i(x')$$
 	$$2.\quad \exists\; j\in {1,2,\dots,k}: u_j(x) > u_j(x')$$
 
-	Such a decision is also called Pareto optimal or Pareto efficient.
+	A non-dominated decision is also called Pareto optimal or Pareto efficient.
 	Any Pareto optimal decision cannot be further improved for one objective unilaterally without resulting in loss in one or more other objectives.
 	The set of all Pareto optimal decisions is called the Pareto front.
 	Note that Pareto optimality doesn't ensure anything beyond the property derived above.
 	In particular it doesn't provide any guarantees about a fair or normative allocation or decision \cite{van2007ethics}.
-	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way (\figref{fig:pareto}):
+	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way (see \figref{fig:pareto}):
 	The objectives are the axes in a 2D plane, moving along the Pareto front showcases intuitively how increasing one objective decreases the other one.
 
 	\begin{figure}
@@ -40,19 +40,20 @@
 		\addplot [only marks,color=red] coordinates {(3,3)(2.5,4)(4.7,1.7)(4.5,2.3)(1,4.5)(2,3)(3.5,2)(1,-1)(2,2)(4,2)(3,0)(5,1)};
     \end{axis}
 	\end{tikzpicture}
-	\caption{Fictional example of a two-dimensional Pareto front (black). Each point is a solution in the feasible set, the red points are dominated. Along the front increasing one objectives leads to decreasing the other one.}
+	\caption{Fictional example of a two-dimensional Pareto front (black). Each point is a solution in the feasible set, the red points are dominated. Along the front increasing one objective leads to decreasing the other one.}
 	\label{fig:pareto}
 	\end{center}
 	\end{figure}
 	
-	Of course it would be desirable to avoid many of trade-offs in the sense of maximizing all objectives simultaneously, but this maximizing solution might not be in the feasible set.
-	But the concept of Pareto optimality alone won't result in a single optimal or \enquote{best} answer to our decision problem.
-	Rather, the approach eliminates all \enquote{strictly worse} possible decisions in the feasible set and the decision maker is faced with a new problem, they now has to choose one solution (decision) from the Pareto front.
-	But the search space is (usually) much more narrow when only considering the Pareto optimal solutions.
-	Also the trade-offs are made explicit, in the sense that choosing to improve one objective along the frontier will incur \enquote{cost} in one or multiple other objectives.
+	Of course, it would be desirable to avoid the many trade-offs, in the sense of maximizing all objectives simultaneously.
+	Unfortunately, this maximizing solution might not be in the feasible set.
+	But the concept of Pareto optimality alone won't result in a single optimal or `best' answer to our decision problem.
+	Rather, the approach eliminates all `strictly worse' possible decisions in the feasible set and the decision maker is faced with a new problem, they now have to choose one solution (decision) from the Pareto front.
+	Luckily, the search space is (usually) much more narrow when only considering the Pareto optimal solutions.
+	Also, the trade-offs are made explicit, in the sense that choosing to improve one objective along the frontier will incur `cost' in one or multiple other objectives.
 	Usually the decision maker needs to choose a single decision from the Pareto front.
 	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (expert knowledge or preference).
-	This information can be incorporated a priori into the global utility function (scalarization), used interactively during calculation of the front or applied after the front has been calculated to choose a solution (a posteriori approach) \cite{hwang2012multiple}.
+	This information can be incorporated a priori into the global utility function (scalarization), used interactively during calculation of the front, or applied after the front has been calculated to choose a solution (a posteriori approach) \cite{hwang2012multiple}.
 
 
 	\subsection{Trade-offs in fair Machine Learning}
