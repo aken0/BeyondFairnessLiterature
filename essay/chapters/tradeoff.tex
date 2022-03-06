@@ -1,32 +1,32 @@
 	The notion of a trade-off describes a decision between multiple (usually mutually contradictory) objectives, in the sense that a gain in one objective results in loss in one or more other objectives.
-	On a broad view, trade-offs are the basic problem of human governance (``the central rationale for many policies'' \cite[p.~77]{Hardin1989}).
+	On a broad view, trade-offs are the basic problem of human governance (``the central rationale for many policies'' \cite[p.~77]{Hardin1989}):
     How many resources we allocate for one problem, leaving less for another one.
-	Trade-offs are intuitively understood from a young age as they are very common in everyday life, and encompass all human decision-making.
-	Biology, evolutionary theory, and more precisely the human body can be understood in terms of trade-offs \cite{Launer2020}.
+	Trade-offs are intuitively understood from a young age, as they are very common in everyday life, and encompass all human decision-making.
+	Biology, evolutionary theory, and the human body can all be understood in terms of trade-offs \cite{Launer2020}.
 	Similarly, policies dealing with large-scale stochastic problems (vaccination, traffic security, nuclear deterrence, criminal justice) always entail harms and benefits \cite{Hardin1989}, and hence trade-offs.
 
-	But in economics in particular trade-offs are of special interest, they are a central point of study in the field.
+	But in economics in particular trade-offs are of special interest, making them a central focus of study in the field.
 	Accordingly, economists have proposed multiple approaches to formalize them.
 	One such approach, which is so widespread and commonly used that it can be regarded as a convention, is Pareto efficiency and the Pareto front.
 
 	\subsection{Multi-objective optimization and Pareto optimality}
 
-	To approach choosing an optimal feasible decision (allocation) for various types of trade-offs we will introduce multi-objective optimization.
+	To approach the choice of an optimal feasible decision (allocation) for various types of trade-offs we introduce multi-objective optimization.
 	A general multi-objective optimization problem $F$ can be written as a maximization in the following way:
 	$$max \; F(x)=(u_1(x),\dots,u_k(x)), \quad s.t.\; x\in X$$
-	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ the utility/objective function representing the $k$ dimensions.
+	Here $X$ denotes the set of all feasible decisions and $u_i(x)$ are the utility/objective functions, adding up to $k$ dimensions.
 	For a non-trivial multi-objective optimization problem it is not possible to maximize every single objective function at the same time.
 	Thus the notion of Pareto optimality is introduced:
 	A decision $x\in X$ is said to Pareto dominate another solution $x'\in X$ if the following both hold:
 	$$1.\quad \forall\; i\in {1,2,\dots,k}: u_i(x)\ge u_i(x')$$
 	$$2.\quad \exists\; j\in {1,2,\dots,k}: u_j(x) > u_j(x')$$
 
-	Such a decision is also called Pareto optimal or Pareto efficient.
+	A non-dominated decision is also called Pareto optimal or Pareto efficient.
 	Any Pareto optimal decision cannot be further improved for one objective unilaterally without resulting in loss in one or more other objectives.
 	The set of all Pareto optimal decisions is called the Pareto front.
 	Note that Pareto optimality doesn't ensure anything beyond the property derived above.
 	In particular it doesn't provide any guarantees about a fair or normative allocation or decision \cite{van2007ethics}.
-	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way (\figref{fig:pareto}):
+	If the optimization problem is two-dimensional the Pareto front can be visualized in an intuitive way (see \figref{fig:pareto}):
 	The objectives are the axes in a 2D plane, moving along the Pareto front showcases intuitively how increasing one objective decreases the other one.
 
 	\begin{figure}
@@ -40,58 +40,59 @@
 		\addplot [only marks,color=red] coordinates {(3,3)(2.5,4)(4.7,1.7)(4.5,2.3)(1,4.5)(2,3)(3.5,2)(1,-1)(2,2)(4,2)(3,0)(5,1)};
     \end{axis}
 	\end{tikzpicture}
-	\caption{Fictional example of a two-dimensional Pareto front (black). Each point is a solution in the feasible set, the red points are dominated. Along the front increasing one objectives leads to decreasing the other one.}
+	\caption{Fictional example of a two-dimensional Pareto front (black). Each point is a solution in the feasible set, the red points are dominated. Along the front increasing one objective leads to decreasing the other one.}
 	\label{fig:pareto}
 	\end{center}
 	\end{figure}
 	
-	Of course it would be desirable to avoid many of trade-offs in the sense of maximizing all objectives simultaneously, but this maximizing solution might not be in the feasible set.
-	But the concept of Pareto optimality alone won't result in a single optimal or \enquote{best} answer to our decision problem.
-	Rather, the approach eliminates all \enquote{strictly worse} possible decisions in the feasible set and the decision maker is faced with a new problem, they now has to choose one solution (decision) from the Pareto front.
-	But the search space is (usually) much more narrow when only considering the Pareto optimal solutions.
-	Also the trade-offs are made explicit, in the sense that choosing to improve one objective along the frontier will incur \enquote{cost} in one or multiple other objectives.
+	Of course, it would be desirable to avoid the many trade-offs, in the sense of maximizing all objectives simultaneously.
+	Unfortunately, this maximizing solution might not be in the feasible set.
+	But the concept of Pareto optimality alone won't result in a single optimal or `best' answer to our decision problem.
+	Rather, the approach eliminates all `strictly worse' possible decisions in the feasible set and the decision maker is faced with a new problem, they now have to choose one solution (decision) from the Pareto front.
+	Luckily, the search space is (usually) much more narrow when only considering the Pareto optimal solutions.
+	Also, the trade-offs are made explicit, in the sense that choosing to improve one objective along the frontier will incur `cost' in one or multiple other objectives.
 	Usually the decision maker needs to choose a single decision from the Pareto front.
 	Depending on the problem at hand the decision maker could (or rather has to) potentially incorporate additional prior information (expert knowledge or preference).
-	This information can be incorporated a priori into the global utility function (scalarization), used interactively during calculation of the front or applied after the front has been calculated to choose a solution (a posteriori approach) \cite{hwang2012multiple}.
+	This information can be incorporated a priori into the global utility function (scalarization), used interactively during calculation of the front, or applied after the front has been calculated to choose a solution (a posteriori approach) \cite{hwang2012multiple}.
 
 
 	\subsection{Trade-offs in fair Machine Learning}
 	When designing any technology \cite{alexander1964notes} there are many trade-offs inherent in the process.
 	Of course ML systems and algorithms are no exception.
-	For example in medical ML systems we aim to both guarantee privacy as well as fair treatment, while our primary goal is still to achieve high accuracy and avoid misclassifications or mistreatment \cite{Chester2020}.
+	For example, in medical ML systems we aim to guarantee both privacy and fair treatment, while our primary goal is still to achieve high accuracy and avoid misclassifications or mistreatment \cite{Chester2020}.
 	This leads to multiple trade-offs that have to be made.
 	Moving forward we are going to characterize three main fairness related trade-offs we identified in machine learning systems:
 	
-	\paragraph{Choice of fairness measure}
-	Often we will quantify fairness subject to a selected fairness measure.
-	Some often used examples include equalized odds, statistical parity and predictive parity \cite{garg2020fairness}.
+	\paragraph{Choice of a fairness measure}
+	Often we will quantify fairness using a selected fairness measure.
+	Some often used measures are equalized odds, statistical parity and predictive parity \cite{garg2020fairness}.
     The factors to take into account when deciding on what metric of fairness to use for a specific ML system are multiple.
 	The different metrics each formalize different notions of morality \cite{binns2020apparent}.
-    First we need to decide what moral principles we want to follow, \ie what we intend by equal or just treatment.
+    First we need to decide what moral principles we want to follow, \ie, what we mean by equal or just treatment.
 	But the choice of measure entails a trade-off already \cite{chouldechova2017fair,kleinberg2016inherent,berk2021fairness}, as some notions of fairness are mutually contradictory and cannot be satisfied at the same time.
-	In turn we have to choose between several contradictory measures, given that they are feasible for the ML problem at hand.
+	As a result, we have to choose between several contradictory measures, given that they are feasible for the ML problem at hand.
 	All the metrics mentioned above are group fairness measures.
-	In group fairness we try to protect so-called sensitive attributes, in the sense of treating different groups (that are separated by the sensitive attributes) equally.
+	In group fairness we try to protect so-called sensitive attributes, in the sense of treating different groups (distinguished by the values for the sensitive attributes) equally.
 	But how do we choose the sensitive features or groups we want to protect?
-	We cannot take the sensitive features for granted, instead the separation into groups is also always a choice that humans have to make.
+	We cannot take the sensitive features for granted, instead the separation into groups is also always a choice that humans have to make, based on legal and societal considerations among others.
 
-	One apparent solution to the problem of choosing a group fairness measure could be to instead consider so called individual fairness.
+	One apparent solution to the problem of choosing a group fairness measure could be to instead consider so-called individual fairness.
 	Here we consider equal treatment of similar individuals, independent of any group affiliation.
 	By only considering individuals instead of groups we seemingly sidestep the problem of choosing the sensitive features we want to protect and which fairness measure to use.
-	Choosing an appropriate measure for the similarity of individuals poses difficulties, as there are many feasible measures and we cannot restrict the space of metrics by imposing additional (moral) constraints on the choice of measure.
+	Choosing an appropriate measure for the similarity of individuals poses difficulties, as there are many feasible measures, and we cannot restrict the space of metrics by imposing additional (moral) constraints on the choice of the fairness measure.
 	But certain similarity measures do correspond to certain moral notions of equal treatment, \eg statistical parity \cite{dwork2012fairness}.
 
     This leads to a conflict between individual fairness, with individuals wishing to be judged independently of their group identity, and group fairness, which tries to correct for discrimination based on sensitive features.
 
 	\paragraph{Accuracy and Fairness}
-	Prediction accuracy is a very desirable property in ML systems, maximizing it is often the primary goal of the employed algorithm.
+	Prediction accuracy is a very desirable property in ML systems, maximizing it often being the primary goal of the employed algorithm.
 	Fair machine learning is concerned with identifying and mitigating bias and discrimination of sensitive attributes in ML systems.
 	Ideally we would like to achieve optimal accuracy while not discriminating with respect to any sensitive feature.
 	But as demonstrated empirically in \eg \cite{kamiran2010discrimination} and \cite{zliobaite2015relation} avoiding discrimination (or achieving a certain level of fairness) often directly results in the loss of prediction accuracy.
 
-	Furthermore, \cite{menon2018cost} showcases that this trade-off is a property inherent in the data and doesn't depend on the algorithm used when learning on a modified problem subject to a fairness constraint.
-	They show that the accuracy and fairness trade-off depends on the \enquote{alignment} of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
-	Conversely, if the sensitive feature and the label are fully independent of each other, we can achieve perfect fairness while retaining the full accuracy.
+	Furthermore, \cite{menon2018cost} showcases that this trade-off is a property inherent in the data and cannot be avoided by a clever choice of the learning algorithm used when learning on a modified problem subject to a fairness constraint.
+	They show that the accuracy and fairness trade-off depends on the `alignment' of the label and the sensitive feature, in the sense that if the label and sensitive feature are highly correlated, ensuring a certain level of fairness will result in huge loss of accuracy.
+	Conversely, if the sensitive feature and the label are perfectly independent of each other, we can achieve perfect fairness while retaining the full accuracy.
 
 	To guarantee a certain amount of fairness, subject to a certain fairness measure, while retaining the maximum accuracy possible under that fairness constraint we can examine the Pareto front of the trade-off. 	
 	This is characterized by \cite{liu2020accuracy} and \cite{wei2020fairness}, where the trade-off between accuracy and fairness is given as a Pareto front for different measures of fairness.
@@ -102,9 +103,9 @@
 	Privacy, just like fairness, is another information-based harm, albeit with slightly different characteristics \cite{van2008information}.
 
 	In the simplest approach to the problem, to assure a certain degree of privacy we have to discard or randomize some of the data, which in turn will lead to worse accuracy.
-	There have also been proposed multiple more refined approaches to mitigate this loss of accuracy (many approaches for privacy preserving data mining and ML \eg \cite{duchi2014privacy}, which uses differential privacy).
+	Multiple more refined approaches have been proposed to mitigate this loss of accuracy (many approaches for privacy preserving data mining and ML \eg \cite{duchi2014privacy}, which uses differential privacy).
 
 	But while those are able to preserve accuracy to some degree under certain privacy guarantees, they aren't always applicable and don't necessarily resolve all of the harms mentioned.
-	This can be partially explained by the different meanings of \enquote{privacy} in different fields.
-	Differential privacy also might additionally amplify the unfairness of a given model \cite{bagdasaryan2019differential}, or in some cases even be incompatible with fairness in general \cite{cummings2019compatibility}. 
+	This can be partially explained by the different meanings of `privacy' in different fields.
+	Differential privacy might additionally amplify the unfairness of a given model \cite{bagdasaryan2019differential}, or in some cases even be incompatible with fairness in general \cite{cummings2019compatibility}. 
 	This is a problem, as it is often desirable to achieve high accuracy while preserving both privacy and fairness, \eg when we try to balance all three axes of conflict (accuracy, privacy and fairness) in our ML system \cite{Chester2020}.
